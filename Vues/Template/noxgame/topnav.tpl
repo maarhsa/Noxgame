@@ -25,7 +25,7 @@
 	<table class="top">
 			<tr>
 				<td class="header_planet" ROWSPAN="2">
-					<img class="planet" src="{dpath}Game/planete/min/min_{image}" alt="{name_planet}" title="{name_planet}" height="50" width="50">
+					<img class="planet" src="{dpath}Games/planete/min/min_{image}.jpg" alt="{name_planet}" title="{name_planet}" height="50" width="50">
 				</td>
 				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/metal.gif" alt="{Metal}" title="capacité de stockage: {metal_max}" /></td>
 				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/cristal.gif" alt="{Crystal}" title="capacité de stockage: {crystal_max}"/></td>
