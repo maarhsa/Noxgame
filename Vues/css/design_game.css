@@ -73,14 +73,17 @@ a:hover
 div.hauteur,.rapport,div.corp_game,table.box,div.topnav_game,div.news_game,div.admin_game,.mini,div.officier,table.construct,table.construct select,div.footer,table.forum,table.section, .description, table.avatar,tr.messages,.quote2, div.balise
 {
 	background :url('../images/Games/img/fond.png');
-	/* contour arrondie */
-	border-radius: 10px;
-	-webkit-border-radius:10px;
 	/* ombrage */
 	-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
 	box-shadow : 0px 0px 5px #3d0097;
 }
 
+div.hauteur,.rapport,div.corp_game,table.box,div.topnav_game,div.news_game,div.admin_game,.mini,div.officier,table.construct,table.construct select,table.forum,table.section, .description, table.avatar,tr.messages,.quote2, div.balise
+{
+	/* contour arrondie */
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+}
 /* l'image beta */
 img.beta
 {
@@ -147,7 +150,6 @@ div.left_game
 	float:left;
 	border-right: 1px; /* Ajoute un bord */
 	width:19.8%;
-	min-height:600px;
 }
 
 div.main_menu
@@ -341,7 +343,7 @@ div.topnaveur a.first
 	margin-left:2%;
 }
 
-div.topnaveur a ,div.lien a ,div.corp a,div.left_game a
+div.topnaveur a ,div.lien a ,div.corp a,div.left_game a,div.footer a
 {
 	margin-left:10px;
 	color:#a7aeff;
@@ -507,39 +509,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91907', end
 input[type=submit].stopbuild:active{
 text-shadow : 0px 0px 0px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
 }
-@media all and (min-width: 0px) {
-		input[type=submit],  input[type=button] {
-			/* Opera */
-			background: #000000 url("gradient-bg.svg");
-			/* Navigateurs récents */
-			background-image: -webkit-gradient(
-				linear,
-				left top, left bottom,
-				from(#474a4b),
-				to(#000000)
-			);
-			background-image: -webkit-linear-gradient(
-				top,
-				#474a4b,
-				#000000
-			);
-			background-image: -moz-linear-gradient(
-				top,
-				#474a4b,
-				#000000
-			);
-			background-image: -o-linear-gradient(
-				top,
-				#474a4b,
-				#000000
-			);
-			background-image: linear-gradient(
-				top,
-				#474a4b,
-				#000000
-			);
-		}
-	}
 
 /* Pour les champs d'un formulaire : mode normal */
 .bloqued{
@@ -620,32 +589,14 @@ table.construct select
 
 div.footer
 {
-	text-align:center;
-	height:75px;
-	margin:20px 150px 35px 50px;
-	
-	border : 1px solid #393939; /* Ajoute un bord */
-	-moz-border-radius : 4px; /* Contour arrondi pour Mozilla */
-	-webkit-border-radius : 4px; /* Contour arrondi pour Chrome, Safari */
-	border-radius : 4px;
-	-moz-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Mozilla */
-	-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
-	box-shadow : 0px 0px 5px #3d0097;
+	border-top: 1px solid #393939; /* Ajoute un bord */
+	margin:40px 0 0 0;
+	bottom:0;
+	position:absolue;
+	height:30px;
+	width:100%;
 }
 
-div.center
-{
-	margin-left:15%;
-	text-align:center;
-}
-
-div.bas
-{
-	margin-top:-25px;
-	float:left;
-	margin-left:40%;
-	text-align:center;
-}
 /* le menu */
 .footer ul
  {
