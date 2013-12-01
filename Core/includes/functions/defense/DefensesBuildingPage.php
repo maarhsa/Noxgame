@@ -189,7 +189,7 @@ function DefensesBuildingPage ( &$CurrentPlanet, $CurrentUser ) {
 				// Imagette + Link vers la page d'info
 				$PageTable .= "<td>";
 				$PageTable .= "<a href=". INDEX_BASE ."infos&gid=".$Element.">";
-				$PageTable .= "<img class='build' border=0 src=\"".$dpath."gebaeude/defense/".$Element.".gif\" align=top width=120 height=120></a>";
+				$PageTable .= "<img class='build' border=0 src=\"". SITEURL ."images/Games/defense/".$Element.".gif\" align=top width=120 height=120></a>";
 				$PageTable .= "</td>";
 
 				// Description

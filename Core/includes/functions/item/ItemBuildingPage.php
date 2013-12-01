@@ -145,7 +145,7 @@ function ItemBuildingPage ( &$CurrentPlanet, $CurrentUser ) {
 				// Imagette + Link vers la page d'info
 				$PageTable .= "<td>";
 				$PageTable .= "<a href=". INDEX_BASE ."infos&gid=".$Element.">";
-				$PageTable .= "<img class='build' border=0 src=\"".$dpath."gebaeude/item/".$Element.".png\" align=top width=118 height=118></a>";
+				$PageTable .= "<img class='build' border=0 src=\"". SITEURL ."images/Games/item/".$Element.".png\" align=top width=118 height=118></a>";
 				$PageTable .= "</td>";
 
 				// Description

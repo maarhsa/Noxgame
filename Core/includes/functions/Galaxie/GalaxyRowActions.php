@@ -147,12 +147,6 @@ function GalaxyRowActions ( $GalaxyRow, $GalaxyRowPlanet, $GalaxyRowPlayer, $Gal
 								$Result .= "(<font color=violet>Alliance</font>)&nbsp;";
 							}
 						}
-						// else
-						// {
-							// $Result .= "<a href=# onclick=\"javascript:doit(6, ".$Galaxy.", ".$System.", ".$Planet.", 1, ".$user["spio_anz"].");\" >";
-							// $Result .= "<img src=". $dpath ."img/e.gif alt=\"".$lang['gl_espionner']."\" title=\"".$lang['gl_espionner']."\" border=0></a>";
-							// $Result .= "&nbsp;";
-						// }
 						
 						if($RowUserPoints <= ($CurrentPoints * $NoobMulti['config_value']) or $CurrentPoints <= ($RowUserPoints * $NoobMulti['config_value']))
 						{
@@ -166,7 +160,7 @@ function GalaxyRowActions ( $GalaxyRow, $GalaxyRowPlanet, $GalaxyRowPlayer, $Gal
 			if ($user["settings_wri"] == "1" &&
 				$GalaxyRowPlayer['id']) {
 				$Result .= "<a href=". INDEX_BASE ."messages&mode=write&id=".$GalaxyRowPlayer["id"].">";
-				$Result .= "<img src=". $dpath ."Games/img/m.gif alt=\"".$lang['gl_sendmess']."\" title=\"".$lang['gl_sendmess']."\" border=0></a>";
+				$Result .= "<img src='". SITEURL ."images/Games/Alliance/pic/m.gif' alt=\"".$lang['gl_sendmess']."\" title=\"".$lang['gl_sendmess']."\" border=0></a>";
                 $Result .= "&nbsp;";
 			}
 			if ($user["settings_bud"] == "1" &&
@@ -179,7 +173,7 @@ function GalaxyRowActions ( $GalaxyRow, $GalaxyRowPlanet, $GalaxyRowPlayer, $Gal
 				$MissileBtn == true          &&
 				$GalaxyRowPlayer['id']) {
 				$Result .= "<a href=". INDEX_BASE ."galaxie&mode=2&galaxy=".$Galaxy."&system=".$System."&planet=".$Planet."&current=".$user['current_planet']." >";
-				$Result .= "<img src=". $dpath ."Games/img/r.gif alt=\"".$lang['gl_mipattack']."\" title=\"".$lang['gl_mipattack']."\" border=0></a>";
+				$Result .= "<img src='". SITEURL ."images/Games/img/r.gif' alt=\"".$lang['gl_mipattack']."\" title=\"".$lang['gl_mipattack']."\" border=0></a>";
 			}
 		}
 	}

@@ -66,7 +66,7 @@ function GalaxyRowPlanet ( $GalaxyRow, $GalaxyRowPlanet, $GalaxyRowUser, $Galaxy
 //		$Result .= ", STICKY, MOUSEOFF, DELAY, ". ($user["settings_tooltiptime"] * 1000) .", CENTER, OFFSETX, -40, OFFSETY, -40 );'";
 		$Result .= ", STICKY, MOUSEOFF, DELAY, 750, CENTER, OFFSETX, -150, OFFSETY, -40 );'";
 		$Result .= " onmouseout='return nd();'>";
-		$Result .= "<img src=". $dpath ."pla/min/min_". typeplanets($user,$GalaxyRowPlanet['planet']) ." height=30 width=30>";
+		$Result .= "<img src=images/Games/planete/min/min_". typeplanets($user,$GalaxyRowPlanet['planet']) .".jpg height=30 width=30>";
 //		$Result .= $GalaxyRowPlanet["name"];
 		$Result .= "</a>";
 	}
