@@ -25,14 +25,14 @@
 	<table class="top">
 			<tr>
 				<td class="header_planet" ROWSPAN="2">
-					<img class="planet" src="{dpath}pla/min/min_{image}" alt="{name_planet}" title="{name_planet}" height="50" width="50">
+					<img class="planet" src="{dpath}Game/planete/min/min_{image}" alt="{name_planet}" title="{name_planet}" height="50" width="50">
 				</td>
-				<td class="header_img" ><img class="ressources" src="{dpath}topnav/new/metal.gif" alt="{Metal}" title="capacité de stockage: {metal_max}" /></td>
-				<td class="header_img" ><img class="ressources" src="{dpath}topnav/new/cristal.gif" alt="{Crystal}" title="capacité de stockage: {crystal_max}"/></td>
-				<td class="header_img" ><img class="ressources" src="{dpath}topnav/new/deuterium.gif" alt="{Deuterium}" title="capacité de stockage: {deuterium_max}"/></td>
-				<td class="header_img" ><img class="ressources" src="{dpath}topnav/energie.png" alt="{Energy}" title="{Energy}"/></td>
-				<td class="header_img" ><img class="messages" src="{dpath}topnav/mp.png" alt="{Message}" title="{Message}" /></td>
-				<td class="header_img" ><img class="ressources" src="{dpath}topnav/new/pv.gif" alt="{pointv}" title="point vote :{nbvotees}"/></td>
+				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/metal.gif" alt="{Metal}" title="capacité de stockage: {metal_max}" /></td>
+				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/cristal.gif" alt="{Crystal}" title="capacité de stockage: {crystal_max}"/></td>
+				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/deuterium.gif" alt="{Deuterium}" title="capacité de stockage: {deuterium_max}"/></td>
+				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/energie.png" alt="{Energy}" title="{Energy}"/></td>
+				<td class="header_img" ><img class="messages" src="{dpath}Games/topnav/mp.png" alt="{Message}" title="{Message}" /></td>
+				<td class="header_img" ><img class="ressources" src="{dpath}Games/topnav/new/pv.gif" alt="{pointv}" title="point vote :{nbvotees}"/></td>
 			</tr>
 			<tr>
 				<td class="header_name" ><b>{Metal}</b></td>
