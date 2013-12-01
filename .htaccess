@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /Nox/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php/$1 [L]
+RewriteRule images/(.*)  Vues/images/$1 [L]
+RewriteRule css/(.*)  Vues/css/$1 [L]
+RewriteRule script/(.*)  Vues/scripts/$1 [L]
+RewriteRule police/(.*)  Vues/police/$1 [L]
+
+

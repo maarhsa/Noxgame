@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Controllers/Module
+Disallow: /Controllers/Pages/games
+Disallow: /Core
+Disallow: /Models
+Disallow: /Vues
+Sitemap: http://adresse.com/sitemap.xml

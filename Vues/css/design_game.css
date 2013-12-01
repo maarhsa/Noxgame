@@ -1,0 +1,1370 @@
+/*
+_________________________________________________________
+ __      ________ _____ _______ ____  _____   ____  _   _ 
+ \ \    / /  ____/ ____|__   __/ __ \|  __ \ / __ \| \ | |
+  \ \  / /| |__ | |       | | | |  | | |__) | |  | |  \| |
+   \ \/ / |  __|| |       | | | |  | |  _  /| |  | | . ` |
+    \  /  | |___| |____   | | | |__| | | \ \| |__| | |\  |
+     \/   |______\_____|  |_|  \____/|_|  \_\\____/|_| \_|
+-------------------------- SKIN --------------------------
+
+*/
+
+@font-face {
+    font-family: 'phoenix';
+    src: url('../police/car_crash-webfont.eot');
+    src: url('../police/car_crash-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../police/car_crash-webfont.woff') format('woff'),
+         url('../police/car_crash-webfont.ttf') format('truetype'),
+         url('../police/car_crash-webfont.svg#car_crashregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #c4c4c4;
+	font-family:Verdana;
+	font-size: 11px;
+	background-image     : url('../images/font/HD-Galaxies-Wallpaper-345.jpg');
+	background-color:  #11181e;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+td,th,tr
+{
+text-align:center;
+}
+
+td a,th a
+{
+	min-width:25px;
+	min-height:25px;
+}
+
+a:hover
+{
+text-decoration:none;
+}
+
+img.beta
+{
+float:left;
+margin:0;
+padding:0;
+}
+
+div.banniere
+{
+	width:400px;
+	height:35px;
+	font-family:Verdana;
+	font-size: 11px;
+	background:#fff;
+	color#000;
+}
+
+.arrondie,img.marchand
+{
+		/* contour arrondie */
+		border-radius: 5px;
+		-webkit-border-radius:5px;
+}
+
+a img.marchand
+{
+	border:1px solid #000;
+}
+
+a:hover img.marchand
+{
+	border:1px solid #444;
+}
+.rapport,div.corp_game,.tablemenu,.planet,.build,div.admin_game,.mini ,div.officier,table.construct,table.construct select,div.topnav_game,div.news_game,table.box
+{
+	/* contour arrondie */
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+}
+
+div.corp_game,.tablemenu,div.topnav_game,div.news_game,div.admin_game,.mini,div.officier,table.construct,table.box
+{
+		/* ombrage */
+		-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+		box-shadow : 0px 0px 5px #3d0097;
+}
+
+table.record,table.record th,table.record tr,table.record td,table.box td
+{
+	text-align:center;
+}
+
+.rapport
+{
+		text-align:center;
+		margin:5px;
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #393939; /* Ajoute un bord */
+		width:100%;
+}
+
+.rapport th,.rapport td
+{
+		text-align:center;
+		font-family:Verdana;
+		font-size:12px;
+}
+
+div.corp_game h1
+{
+	text-transform : uppercase; /* Le texte en majuscule */
+	text-align:center;
+	font-family:phoenix,Verdana;	
+}
+
+td h1
+{
+	text-transform : uppercase; /* Le texte en majuscule */
+	text-align:center;
+	font-family:phoenix,Verdana;	
+}
+div.corp_game
+	{
+		text-align:center;
+		margin:20px 150px 0px 50px;
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #393939; /* Ajoute un bord */
+		min-height:auto;
+		width:auto;
+	}
+
+table.box
+{
+		text-align:center;
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #393939; /* Ajoute un bord */
+}	
+	div.corp_main
+	{
+		text-align:center;
+		margin-left:20%;
+		width:auto;
+		min-height:450px;
+	}
+	/* les popup */
+	.tablemenu
+	{
+		text-align:center;
+        background :#000;
+		border : 1px solid #393939; /* Ajoute un bord */
+	}
+	
+	.tablemenu a
+	{
+		color:#fff;
+		font-size:11px;
+		text-decoration:none;
+		text-transform : uppercase; /* Le texte en majuscule */
+	}
+	
+	.tablemenu a:hover
+	{
+		color:#a7aeff;
+		text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	}
+/*********************************************/
+/*		   GESTION DU MENU DE GAUCHE		 */
+/*___________________________________________*/
+div.left_game
+{
+	float:left;
+	border-right: 1px; /* Ajoute un bord */
+	width:19.8%;
+	min-height:600px;
+	/* contour arrondie */
+	border-radius: 10px 0px 0px 10px;
+	-webkit-border-radius:10px 0px 0px 10px;
+}
+
+div.main_menu
+{
+	position:absolue;
+}
+
+.planet
+{
+	border-bottom: 1px solid #ccc; /* Ajoute un bord */
+	border-right: 1px solid #ccc; /* Ajoute un bord */
+}
+
+.build
+{
+	border: 1px solid #406f7c; /* Ajoute un bord */
+}
+
+.bwWrapper {
+    position:relative;
+    display:block;
+}
+
+.navbox {
+	position: relative;
+	float: left;
+}
+
+ul.nav {
+	list-style: none;
+	display: block;
+	width: 200px;
+	padding: 0px 0 1px 0;
+	-webkit-background-size: 50% 100%;
+}
+
+ul.nav li a {
+	padding:5px;
+	color: #a7aeff;
+	-webkit-border-top-right-radius: 10px;
+ 	-webkit-border-bottom-right-radius: 10px;
+	width: 180px;
+	height:20px;
+	display: block;
+	text-decoration: none;
+}
+
+ul.nav li a.vote_in {
+	color: lime;
+}
+
+ul li a.red {
+	color: red;
+}
+ul li a.green {
+	color: lime;
+}
+ul.nav li a:hover {
+
+	width: 180px;
+	height:22px;
+	color: #FFF;
+}
+
+div.vote_out
+{
+	color:red;
+}
+/*********************************************/
+/*	GESTION DU MENU DU TOPNAV & TOPMENU		 */
+/*___________________________________________*/
+
+div.topnav_game
+{
+	text-align:center;
+	margin:15px 150px 0px 50px;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	border-bottom : 1px solid #; /* Ajoute un bord */
+	min-height:50px;
+}
+
+/** gestions des news **/
+div.news_game
+{
+	text-align:center;
+	margin:15px 150px 0px 50px;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	border-bottom : 1px solid #; /* Ajoute un bord */
+	min-height:50px;
+}
+
+div.news_game span,div.news_game span
+{
+	text-align:center;
+}
+/** pour le panel admin (il n'y a plus!!! **/
+div.admin_game
+{
+	text-align:center;
+	margin:15px 150px 0px 50px;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	border-bottom : 1px solid #; /* Ajoute un bord */
+	min-height:50px;
+}
+
+.admin_game a
+{
+	margin-left:10px;
+	color:#a7aeff;
+	font-size:10px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-transform : uppercase; /* Le texte en majuscule */
+	text-decoration:none;
+}
+
+.admin_game a:hover
+{
+	color:#fff;
+	text-shadow : 0px 1px 8px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+}
+
+div.hauteur
+{
+	background-image     : url('../images/login/login_bg.png');
+	background-repeat:repeat-x;
+	margin: 0;
+	padding: 0;
+	margin-top:-2px;
+	height:40px;
+}
+
+td.header_planet,td.header_img,td.header_name,td.header_name_planet,td.header_ressource
+{
+	color:#ffffff;
+	text-align:center;
+	width:140px;
+}
+
+td.header_img img.ressources
+{
+	border:0px;
+	height:28px;
+	width:45px;
+}
+
+td.header_img img.messages
+{
+	border:0px;
+	height:37px;
+	width:45px;
+}
+
+td.header_name
+{
+	color:#ffffff;
+	text-decoration:underline;
+}
+
+td.officier_img
+{
+	height:75px;
+	width:75px;
+}
+
+td.officier_img img
+{
+	height:60px;
+	width:60px;
+	border
+}
+
+table.info
+{
+	background :url('../images/font/fond.png');
+	background-repeat:repeat-z;
+	border-top: 1px solid #393939; /* Ajoute un bord */
+	-moz-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Mozilla */
+	-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 5px #3d0097;
+}
+/********************************************/
+/*		GESTION DES CODES DE COULEUR		*/
+/********************************************/
+.flight .ownattack a
+{
+	color:#fff;
+}
+
+.allymember { 
+  color: #800080;
+}
+
+.noob { 
+  color: lime;
+}
+
+.strong { 
+  color: red;
+}
+
+.vacation { 
+  color: #0592ee;
+}
+
+.inactive { 
+  color: #CCCCCC;
+}
+
+.longinactive { 
+  color: #999999;
+}
+
+.banned {
+  color: orange;
+  text-decoration: line-through;
+}
+
+.mini {
+	text-align:center;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	border-bottom : 1px solid #; /* Ajoute un bord */
+}
+
+.return a,.messages{
+color: #E6EBFB;
+}
+
+.holding {
+}
+  
+*.ownattack { 
+  color: lime;
+}
+
+a.ownattack{
+  color: #E6EBFB;
+}
+
+*.owncolony { 
+  color: lime;
+}
+
+.flight .owncolony a { 
+  color: #E6EBFB;
+}
+
+*.owndeploy { 
+  color: lime;
+}
+
+.flight .owndeploy a { 
+  color: #E6EBFB;
+}
+
+*.owndestroy { 
+  color: gold;
+}
+
+.flight .owndestroy a { 
+  color: #E6EBFB;
+}
+
+*.ownespionage { 
+  color: orange;
+}
+
+.flight .ownespionage a { 
+  color: #E6EBFB;
+}
+
+*.ownfederation { 
+  color: 33CC00;
+}
+
+.flight .ownfederation a { 
+  color: #E6EBFB;
+}
+
+*.ownharvest { 
+  color: lime;
+}
+
+.flight .ownharvest a { 
+  color: #E6EBFB;
+}
+
+*.ownhold { 
+  color: #80a0C0;
+}
+
+.flight .ownhold a { 
+  color: #E6EBFB;
+}
+
+*.ownmissile { 
+  color: orange;
+}
+
+.flight .ownmissile a { 
+  color: #E6EBFB;
+}
+
+*.owntransport { 
+  color: lime;
+}
+
+.flight .owntransport a { 
+  color: #E6EBFB;
+}
+
+*.attack { 
+  color: red;
+}
+
+.flight .attack a { 
+  color: #E6EBFB;
+}
+
+*.colony { 
+  color: lime;
+}
+
+.flight .colony a { 
+  color: #E6EBFB;
+}
+
+*.deploy { 
+  color: lime;
+}
+
+.flight .deploy a { 
+  color: #E6EBFB;
+}
+
+*.destroy { 
+  color: gold;
+}
+
+.flight .destroy a { 
+  color: #E6EBFB;
+}
+
+*.espionage { 
+  color: red;
+}
+
+.flight .espionage a { 
+  color: #E6EBFB;
+}
+
+*.federation {  
+  color: CC0000;
+}
+
+.flight .federation a { 
+  color: #E6EBFB;
+}
+
+*.harvest {  
+  color: lime;
+}
+
+.flight .harvest a { 
+  color: #E6EBFB;
+}
+
+*.hold { 
+  color: #80a0C0;
+}
+
+.flight .hold a { 
+  color: #E6EBFB;
+}
+
+*.missile { 
+  color: red;
+}
+
+
+*.transport {  
+  color: lime;
+}
+
+.flight .transport a { 
+  color: #E6EBFB;
+}
+
+.flight .phalanx_fleet, .phalanx_fleet {
+	color: lime;
+}
+
+.return .phalanx_fleet {
+	color: #3BB9FF;
+}
+
+.success { 
+  color: lime;
+}
+
+.errormessage a {
+	text-decoration: underline;
+}
+
+.error { 
+  color: red;
+}
+
+.warning { 
+  color: orange;
+}
+
+.notice { 
+  color: yellow;
+}
+
+.combatreport {
+  color: red;
+}
+
+.espionagereport {
+  color: orange;
+}
+
+.timeremaining {  
+  color: orange;
+}
+/*********************************************/
+/*	   GESTION DU MENU DE DROITE OFFICIER  	 */
+/*___________________________________________*/
+
+div.officier
+{
+	float:right;
+	margin:0;
+	padding:0;
+	text-align:center;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	border-bottom : 1px solid #; /* Ajoute un bord */
+	min-height:560px;
+	margin-right:50px;
+	margin-top:15px;
+	width:80px;
+}
+
+
+div.hauteur
+{
+	background-image     : url('../images/login/login_bg.png');
+	background-repeat:repeat-x;
+	margin: 0;
+	padding: 0;
+	margin-top:-2px;
+	height:40px;
+}
+/*********************************************/
+/*		   GESTION DES DIFFERENTS LIENS 	 */
+/*___________________________________________*/
+
+/* le top menu */
+.topnaveur ul {
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ padding-top:5px;
+ }
+.topnaveur li {
+ margin-left:2px;
+ float:left; /*pour IE*/
+ }
+
+div.topnaveur a.first
+{
+	margin-left:2%;
+}
+
+div.topnaveur a ,div.lien a ,div.corp a,div.left_game a
+{
+	margin-left:10px;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+}
+
+div.corp_game a
+{
+	margin-left:10px;
+	color:#a7aeff;
+	font-size:12px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-transform : uppercase; /* Le texte en majuscule */
+	text-decoration:none;
+}
+
+div.corp_game a:hover
+{
+	color:#fff;
+	text-shadow : 0px 1px 8px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+}
+
+div.corp a.mail
+{
+	color:#a7aeff;
+	font-size:12px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : capitalize; /* Le texte en majuscule */
+}
+
+td.c div
+{
+	color:#a7aeff;
+	font-size:14px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+}
+
+
+/********************************************************/
+/* 		GESTION DES CHAMPS INPUTS DE FORMULAIRE			*/
+/********************************************************/
+
+/* Pour les champs d'un formulaire : mode Normal */
+input[type=text], input[type=password], input[type=checkbox] {
+	background:#fff;
+	color : #000;
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	border : 1px solid #000; /* Ajoute un bord */
+	padding : 3px; /* Un espace entre le texte et le bord */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+
+	-webkit-box-shadow : 0px 0px 3px #000; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 3px #000;
+}
+
+/* Pour les champs d'un formulaire : mode Focus */
+input[type=text].erreur:focus, input[type=password].erreur:focus, input[type=text]:focus, input[type=password]:focus, input[type=checkbox]:focus, textarea:focus, select:focus{
+	border-color : #FFFFFF;
+	outline : none; /* Pour enlever le contour lorsque le navigateur le met lui même lorsque l'on sélectionne un input */
+	
+	-webkit-box-shadow : 0px 0px 3px #FFFFFF; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 3px #FFFFFF;
+}
+
+/* Pour les champs d'un formulaire : mode normal */
+input[type=submit],  input[type=button],a.button{
+	/* Anciens navigateurs */
+	background: #000000 url("gradient-bg.png") repeat-x center;
+	-o-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	/* Internet Explorer */
+	*background: #000000;
+	background: #000000\0/;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FF474a4b, endColorstr=#FF000000);
+
+	border : 1px solid #CCC;
+	color : #FFFFFF;
+	cursor : pointer; /* Curseur de type pointer */
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+	
+	-webkit-box-shadow : 0px 0px 2px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 2px #4e4e4e;
+}
+
+/* Pour les champs d'un formulaire : mode normal */
+input[type=submit].build{
+background: #bfd255; /* Old browsers */
+background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfd255), color-stop(50%,#8eb92a), color-stop(51%,#72aa00), color-stop(100%,#9ecb2d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* IE10+ */
+background: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+
+	border : 1px solid #CCC;
+	color : #FFFFFF;
+	cursor : pointer; /* Curseur de type pointer */
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+
+	-webkit-box-shadow : 0px 0px 2px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 2px #4e4e4e;
+}
+
+input[type=submit].build:hover{
+background: #9bae2e; /* Old browsers */
+background: -moz-linear-gradient(top, #9bae2e 0%, #6c8c20 50%, #558000 51%, #779822 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9bae2e), color-stop(50%,#6c8c20), color-stop(51%,#558000), color-stop(100%,#779822)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #9bae2e 0%,#6c8c20 50%,#558000 51%,#779822 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #9bae2e 0%,#6c8c20 50%,#558000 51%,#779822 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #9bae2e 0%,#6c8c20 50%,#558000 51%,#779822 100%); /* IE10+ */
+background: linear-gradient(to bottom, #9bae2e 0%,#6c8c20 50%,#558000 51%,#779822 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bae2e', endColorstr='#779822',GradientType=0 ); /* IE6-9 */
+
+	border : 1px solid #CCC;
+	color : #FFFFFF;
+	cursor : pointer; /* Curseur de type pointer */
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+	-webkit-box-shadow : 0px 0px 2px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 2px #4e4e4e;
+}
+input[type=submit].build:active{
+text-shadow : 0px 0px 0px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+}
+
+/* Pour les champs d'un formulaire : mode normal */
+input[type=submit].stopbuild{
+background: #f84332; /* Old browsers */
+background: -moz-linear-gradient(top, #f84332 0%, #f1675d 50%, #f6180c 51%, #f02318 71%, #e72a27 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f84332), color-stop(50%,#f1675d), color-stop(51%,#f6180c), color-stop(71%,#f02318), color-stop(100%,#e72a27)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f84332 0%,#f1675d 50%,#f6180c 51%,#f02318 71%,#e72a27 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f84332 0%,#f1675d 50%,#f6180c 51%,#f02318 71%,#e72a27 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f84332 0%,#f1675d 50%,#f6180c 51%,#f02318 71%,#e72a27 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f84332 0%,#f1675d 50%,#f6180c 51%,#f02318 71%,#e72a27 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84332', endColorstr='#e72a27',GradientType=0 ); /* IE6-9 */
+
+	border : 1px solid #CCC;
+	color : #FFFFFF;
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+	-webkit-box-shadow : 0px 0px 2px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 2px #4e4e4e;
+}
+
+/* Pour les champs d'un formulaire : mode normal */
+.bloqued{
+background: #9c9c9c; /* Old browsers */
+background: -moz-linear-gradient(top, #9c9c9c 0%, #454545 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9c9c9c), color-stop(100%,#454545)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* IE10+ */
+background: linear-gradient(to bottom, #9c9c9c 0%,#454545 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9c9c', endColorstr='#454545',GradientType=0 ); /* IE6-9 */
+	height:17px;
+	min-width:80px;
+	border : 1px solid #000;
+	color : #ccc;
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+}
+
+.bloqueded
+{
+background: #9c9c9c; /* Old browsers */
+background: -moz-linear-gradient(top, #9c9c9c 0%, #454545 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9c9c9c), color-stop(100%,#454545)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #9c9c9c 0%,#454545 100%); /* IE10+ */
+background: linear-gradient(to bottom, #9c9c9c 0%,#454545 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9c9c', endColorstr='#454545',GradientType=0 ); /* IE6-9 */
+	height:27px;
+	min-width:80px;
+	border : 1px solid #000;
+	color : #ccc;
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+}
+
+input[type=submit].stopbuild:hover{
+background: #d91907; /* Old browsers */
+background: -moz-linear-gradient(top, #d91907 0%, #e62214 50%, #bb1007 51%, #ba150c 71%, #b61714 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d91907), color-stop(50%,#e62214), color-stop(51%,#bb1007), color-stop(71%,#ba150c), color-stop(100%,#b61714)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #d91907 0%,#e62214 50%,#bb1007 51%,#ba150c 71%,#b61714 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #d91907 0%,#e62214 50%,#bb1007 51%,#ba150c 71%,#b61714 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #d91907 0%,#e62214 50%,#bb1007 51%,#ba150c 71%,#b61714 100%); /* IE10+ */
+background: linear-gradient(to bottom, #d91907 0%,#e62214 50%,#bb1007 51%,#ba150c 71%,#b61714 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d91907', endColorstr='#b61714',GradientType=0 ); /* IE6-9 */
+
+	border : 1px solid #CCC;
+	color : #FFFFFF;
+	cursor : pointer; /* Curseur de type pointer */
+	font-family : Arial, Calibri, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	padding : 3px 10px 3px 10px;
+	margin : 5px 0px 5px 0px;
+	text-decoration : none; /* Enlève la décoration du texte */
+	text-shadow : 0px 1px 1px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Pour mettre en majuscule le texte */
+	
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+	-webkit-box-shadow : 0px 0px 2px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 2px #4e4e4e;
+}
+input[type=submit].stopbuild:active{
+text-shadow : 0px 0px 0px #333333; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+}
+@media all and (min-width: 0px) {
+		input[type=submit],  input[type=button] {
+			/* Opera */
+			background: #000000 url("gradient-bg.svg");
+			/* Navigateurs récents */
+			background-image: -webkit-gradient(
+				linear,
+				left top, left bottom,
+				from(#474a4b),
+				to(#000000)
+			);
+			background-image: -webkit-linear-gradient(
+				top,
+				#474a4b,
+				#000000
+			);
+			background-image: -moz-linear-gradient(
+				top,
+				#474a4b,
+				#000000
+			);
+			background-image: -o-linear-gradient(
+				top,
+				#474a4b,
+				#000000
+			);
+			background-image: linear-gradient(
+				top,
+				#474a4b,
+				#000000
+			);
+		}
+	}
+
+input[type=submit]:hover,  input[type=button]:hover,a.button:hover
+{
+	/* Anciens navigateurs */
+	background: #000000 url("gradient-bg.png") repeat-x center;
+	-o-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	/* Internet Explorer */
+	*background: #000000;
+	background: #000000\0/;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FF000000, endColorstr=#FF474a4b);
+	
+	-webkit-box-shadow : 0px 0px 10px #4e4e4e; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 10px #4e4e4e;
+	
+}
+@media all and (min-width: 0px) {
+		input[type=submit]:hover,  input[type=button]:hover {
+			/* Opera */
+			background: #000000 url("gradient-bg.svg");
+			/* Navigateurs récents */
+			background-image: -webkit-gradient(
+				linear,
+				left top, left bottom,
+				from(#000000),
+				to(#474a4b)
+			);
+			background-image: -webkit-linear-gradient(
+				top,
+				#474a4b,
+				#000000
+			);
+			background-image: -moz-linear-gradient(
+				top,
+				#000000,
+				#474a4b
+			);
+			background-image: -o-linear-gradient(
+				top,
+				#000000,
+				#474a4b
+			);
+			background-image: linear-gradient(
+				top,
+				#000000,
+				#474a4b
+			);
+		}
+	}
+	
+/****************************************************/
+/*		liste de construction vaisseau defense		*/
+/****************************************************/
+table.construct
+{
+		text-align:center;
+		margin:5px 5px 5px 5px;
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #393939; /* Ajoute un bord */
+		min-height:450px;
+		width:auto;
+}
+
+table.construct select
+{
+		background :url('../images/Games/img/fond.png');
+		border:0px;
+		color:#fff;
+		-khtml-opacity       : 0.5;
+		opacity              : 0.5; 
+}
+
+/********LE FOOTER********/
+
+div.footer
+{
+	text-align:center;
+	height:75px;
+	margin:20px 150px 35px 50px;
+	background :url('../images/font/fond.png');
+	border : 1px solid #393939; /* Ajoute un bord */
+	-moz-border-radius : 4px; /* Contour arrondi pour Mozilla */
+	-webkit-border-radius : 4px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 4px;
+	-moz-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Mozilla */
+	-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
+	box-shadow : 0px 0px 5px #3d0097;
+}
+
+div.center
+{
+	margin-left:15%;
+	text-align:center;
+}
+
+div.bas
+{
+	margin-top:-25px;
+	float:left;
+	margin-left:40%;
+	text-align:center;
+}
+/* le menu */
+.footer ul
+ {
+	 list-style-type:none;
+	 padding-top:5px;
+ }
+ 
+.footer li {
+	float:left; /*pour IE*/
+	height:45px;
+	margin-left:2px;
+ }
+ 
+.footer li a
+ {
+ 	margin-left:10px;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+ }
+ /*******************************************/
+ /*          DESIGN FORUM INGAME            */
+ /*******************************************/
+ 
+ table.forum,table.section
+ {
+		margin:50px 0 0 0;
+        background :url('../images/Games/img/fond.png');
+		border : 0px solid #616968; /* Ajoute un bord */
+		min-height:450px;
+		width:95%;	
+		border-radius:5px;
+		-webkit-border-radius:5px;
+ }
+ 
+ table.categorie
+ {
+	width:100%;
+	border : 0px solid #616968; /* Ajoute un bord */
+	/* contour arrondie */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	padding-bottom:5px;
+ }
+ 
+ .categorie td h1
+ {
+		text-align:left;
+		font-size:12px;
+		padding-left:5px;
+ }
+ 
+ .categorie td.title,table.section tr.title
+ {
+		background: #45484d; /* Old browsers */
+		background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+ }
+ 
+  td.forum_name a
+ {
+  	margin-left:10px;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+ }
+ 
+ .last a
+ {
+   	margin-left:10px;
+	color:#a7aeff;
+	font-size:11px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+ }
+ 
+ .description
+ {
+	margin:50px 0 0 0;
+	background :url('../images/Games/img/fond.png');
+ 	border : 1px solid #616968; /* Ajoute un bord */
+	/* contour arrondie */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	width:80%;
+ }
+ 
+ /******************************/
+ /*			SECTIONS		   */
+ /******************************/
+ table.section tr.title th
+ {
+	height:25px;	
+ }
+
+ table.section tr.title th.pagination
+ {
+	border-radius:5px 0px 0px 0px;
+	-webkit-border-radius:5px 0px 0px 0px;	
+ }
+ 
+ table.section tr.title th.newmsgs
+ {
+	border-radius:0px 5px 0px 0px;
+	-webkit-border-radius:0px 5px 0px 0px;	
+ }
+ 
+  table.section tr.title td.img
+ {
+	width:10px;
+	height:10px;
+ }
+ 
+ td.tide,.pagination
+ {
+		text-align:left;
+		font-size:12px;
+		padding-left:5px;
+ }
+ 
+  td.tide div a,.pagination a
+ {
+  	margin-left:10px;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+ }
+ 
+.newmsgs
+ {
+		text-align:right;
+		font-size:12px;
+		padding-left:5px;
+ }
+ 
+ .title2
+ {
+	background: rgb(226,226,226); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+	color:#000;
+	height:28px;
+ }
+ 
+ table.avatar
+ {
+ 		margin:5px;
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #616968; /* Ajoute un bord */
+		border-radius:5px;
+		-webkit-border-radius:5px;
+		width:150px;
+ }
+
+ 
+ table.themess
+ {
+	float:right;
+	width:100%;
+	min-height:150px;
+ }
+
+ td.themess
+ {
+ background:#;
+ }
+ 
+td.avatar
+{
+width:160px;
+
+}
+
+td.lien,tr.messages
+{
+	height:25px;
+}
+
+td.mgs
+{
+	height:145px;
+	text-align:left;
+	vertical-align:top;
+}
+
+td.lien a
+{
+	float:right;
+	text-align:right;
+  	margin-left:10px;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+}
+
+tr.signature
+{
+	border-top:1px solid #fff;
+}
+
+tr.messages
+{
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #616968; /* Ajoute un bord */
+		border-radius:5px;
+		-webkit-border-radius:5px;
+}
+
+.quote
+{
+        background :url('../images/Games/img/quote.png');
+		border : 1px solid #616968; /* Ajoute un bord */
+		border-radius:5px;
+		-webkit-border-radius:5px;
+}
+.quote2
+{
+        background :url('../images/Games/img/fond.png');
+		border : 1px solid #616968; /* Ajoute un bord */
+		border-radius:5px;
+		-webkit-border-radius:5px;
+}
+
+td h2
+{
+	font-family:Verdana;
+	color:#a7aeff;
+	font-size:13px;
+	letter-spacing : 1px; /* Espace entre les lettres */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+	text-transform : uppercase; /* Le texte en majuscule */
+}
+
+/* le menu des icone */
+ul.balise{
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ padding-top:5px;
+ }
+.balise li {
+ margin-left:2px;
+ float:left; /*pour IE*/
+ }
+ 
+ div.balise
+ {
+	text-align:center;
+	height:20px;
+	min-width:20px;
+	color:#fff;
+	background :url('../images/Games/img/fond.png');
+	border : 1px solid #616968; /* Ajoute un bord */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	padding-top:1px;
+	padding-bottom:1px;
+	padding-left:3px;
+	padding-right:3px;
+ }

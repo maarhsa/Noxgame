@@ -1,0 +1,102 @@
+html, body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:100%;
+  background:#000;
+  color: #c4c4c4;/* la couleur du texte */
+  font-size: 12px;
+}
+
+h1,h2,h3
+{
+	color:#a7aeff;/* la couleur du texte */
+	text-shadow : 0px 1px 5px #3d0097; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
+}
+
+h2,h3
+{
+	font-size: 12px;
+	color:#fff;/* la couleur du texte */
+}
+
+/* Pour les champs d'un formulaire : mode Normal */
+input[type=text],
+input[type=password],
+input[type=checkbox],
+input[type=button],
+input[type=submit]
+{
+	font-size : 12px;
+	padding : 3px; /* Un espace entre le texte et le bord */
+	-webkit-border-radius : 3px; /* Contour arrondi pour Chrome, Safari */
+	border-radius : 3px;
+}
+
+input[type=button],
+input[type=submit]
+{
+	min-width:87px;
+	min-height:24px;
+}
+.snap-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height:auto;
+  z-index: 2;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.snap-drawers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+.snap-drawer {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 265px;
+  height: auto;
+  -webkit-transition: width 0.3s ease;
+     -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+       -o-transition: width 0.3s ease;
+          transition: width 0.3s ease;
+}
+
+.snap-drawer-left {
+  left: 0;
+  z-index: 1;
+}
+
+.snap-drawer-right {
+  right: 0;
+  z-index: 1;
+}
+
+.snapjs-left .snap-drawer-right,
+.snapjs-right .snap-drawer-left {
+  display: none;
+}
+
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+  width: 100%;
+}
