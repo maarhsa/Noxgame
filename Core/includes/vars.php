@@ -110,10 +110,6 @@ if ( defined('INSIDE')) {
 	406 => "buster_canyon",
 	407 => "small_protection_shield",
 	408 => "big_protection_shield",
-	409 => "canon_cata",
-	
-	502 => "interceptor_misil",
-	503 => "interplanetary_misil",
 
 	601 => "rpg_geologue",
 	602 => "rpg_amiral",
@@ -177,7 +173,6 @@ if ( defined('INSIDE')) {
 		213 => array(  8 =>   9, 110 =>   6, 107 =>   5),
 		214 => array(  8 =>  12, 110 =>   7, 107 =>   6, 199 =>   1),
 		215 => array(  8 =>   8, 107 =>   5, 111 =>  12, 118 =>   5),
-		216 => array(  8 =>   15, 108 =>   15, 116 => 10),
 		
 		// Objet
 		300 => array(  8 =>   1),
@@ -203,24 +198,7 @@ if ( defined('INSIDE')) {
 		406 => array(  8 =>   8, 113 =>   7),
 		407 => array(  8 =>   1, 104 =>   2),
 		408 => array(  8 =>   6, 104 =>   6),
-		409 => array( 106 =>   15,  127 =>   25),
-		502 => array(  44 =>   2),
-		503 => array(  44 =>   4),
 
-		// Officier
-		603 => array( 601 =>   5),
-		604 => array( 602 =>   5),
-		605 => array( 601 =>  10, 603 =>   2),
-		606 => array( 601 =>  10, 603 =>   2),
-		607 => array( 605 =>   1),
-		608 => array( 606 =>   1),
-		609 => array( 601 =>  20, 603 =>  10, 605 =>   3, 606 =>   3, 607 =>   2, 608 =>   2),
-		610 => array( 602 =>  10, 604 =>   5),
-		611 => array( 602 =>  10, 604 =>   5),
-		612 => array( 610 =>   1),
-		613 => array( 611 =>   1),
-		614 => array( 602 =>  20, 604 =>  10, 610 =>   2, 611 =>   2, 612 =>   1, 613 =>   3),
-		615 => array( 614 =>   1, 609 =>   1),	
 	);
 
 	$pricelist = array(
@@ -298,25 +276,7 @@ if ( defined('INSIDE')) {
 		406 => array ( 'metal' =>   50000, 'crystal' =>   50000, 'deuterium' =>   30000, 'energy' => 0, 'factor' => 1 ),
 		407 => array ( 'metal' =>   10000, 'crystal' =>   10000, 'deuterium' =>       0, 'energy' => 0, 'factor' => 1 ),
 		408 => array ( 'metal' =>   50000, 'crystal' =>   50000, 'deuterium' =>       0, 'energy' => 0, 'factor' => 1 ),
-		/*
-		502 => array ( 'metal' =>    8000, 'crystal' =>    2000, 'deuterium' =>       0, 'energy' => 0, 'factor' => 1 ),
-		503 => array ( 'metal' =>   12500, 'crystal' =>    2500, 'deuterium' =>   10000, 'energy' => 0, 'factor' => 1 ),*/
 
-		601 => array ( 'max' =>  20),
-		602 => array ( 'max' =>  20),
-		603 => array ( 'max' =>  10),
-		604 => array ( 'max' =>  10),
-		605 => array ( 'max' =>   3),
-		606 => array ( 'max' =>   3),
-		607 => array ( 'max' =>   2),
-		608 => array ( 'max' =>   2),
-		609 => array ( 'max' =>   1),
-		610 => array ( 'max' =>   2),
-		611 => array ( 'max' =>   2),
-		612 => array ( 'max' =>   1),
-		613 => array ( 'max' =>   3),
-		614 => array ( 'max' =>   1),
-		615 => array ( 'max' =>   1),
 	);
 	
 	$CombatCaps = array(
@@ -398,9 +358,9 @@ if ( defined('INSIDE')) {
 
 	$reslist['build']    = array (   1,   2,   3,   4,  5,  6,  7,  8,  9,  10,  11,  12, 13, 14);
 	$reslist['tech']     = array ( 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119);
-	$reslist['fleet']    = array ( 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215,216 );
+	$reslist['fleet']    = array ( 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215);
 	$reslist['item']     = array ( 300, 301, 302, 303, 304, 305, 306,307, 308, 309, 310, 311, 312);
-	$reslist['defense']  = array ( 401, 402, 403, 404, 405, 406, 407, 408,409, 502, 503 );
+	$reslist['defense']  = array ( 401, 402, 403, 404, 405, 406, 407, 408 );
 	$reslist['officier'] = array ( 601, 602, 603, 604, 605, 606,607, 608, 610, 611);
 	$reslist['prod']     = array (   1,   2,   3,   4,  12, 212 );
 }

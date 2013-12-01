@@ -1,7 +1,7 @@
 	<table width="100%">
 		{Have_new_message}
 		<tr>
-			<td colspan="3"><img src="{dpath}pla/{planet_image}.png" width="{widthplapla}"><br>{Developed_fields}<div  style="border: 1px solid rgb(153, 153, 255); width: {casw}px;margin-left:25%;"><div  id="CaseBarre" style="background-color: {case_barre_barcolor}; width: {case_barre}px;"><font color="#CCF19F">{case_pourcentage}</font></div></div></td>
+			<td colspan="3"><img src="{dpath}Games/planete/{planet_image}.png" width="{widthplapla}"><br>{Developed_fields}<div  style="border: 1px solid rgb(153, 153, 255); width: {casw}px;margin-left:25%;"><div  id="CaseBarre" style="background-color: {case_barre_barcolor}; width: {case_barre}px;"><font color="#CCF19F">{case_pourcentage}</font></div></div></td>
 			<td VALIGN=top>
 				<table style='margin-top:25px;'>
 					<tr>
