@@ -47,10 +47,10 @@ define('ERROR',CORE .'error/index.php');
 
 define('PHPEXT', require 'extension.inc');
 
-define('SITEURL','http://localhost/nox/');
+define('SITEURL','http://localhost/nox/Noxgame/');
 define('SCRIPTS',SITEURL .'script/');
 define('CSS',SITEURL .'css/');
-define('REDIRECT','http://localhost/nox/');
+define('REDIRECT','http://localhost/nox/Noxgame/');
 define('IMAGES',SITEURL .'images/');
 $dpath = IMAGES;
 
