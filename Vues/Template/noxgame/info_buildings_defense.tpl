@@ -10,7 +10,7 @@
 		<table>
 		<tbody>
 		<tr>
-			<td><img class='build' src="{dpath}gebaeude/defense/{image}.gif" align="top" border="0" height="120" width="120"></td>
+			<td><img class='build' src="images/Games/defense/{image}.gif" align="top" border="0" height="120" width="120"></td>
 			<td>{description}<br><br>{rf_info_to}{rf_info_from}</td>
 		</tr>
 		</tbody>

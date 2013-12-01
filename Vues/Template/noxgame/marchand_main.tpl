@@ -5,7 +5,7 @@
 			<td colspan="3"><font color="#FFFFFF">{mod_ma_title}</font><td>
 		</tr>
 		<tr>
-			<td colspan="3"><img src="images/Games/marchand/marchand.png" alt="{mod_ma_title}" title="{mod_ma_title}" {mobile}/><td>
+			<td colspan="3"><img src="images/Games/banniere/marchand.png" alt="{mod_ma_title}" title="{mod_ma_title}" {mobile}/><td>
 		</tr>
 		<tr>
 			<td>{Metal}</td>

@@ -1,7 +1,7 @@
 <tr>
 	<td class="l">
 		<a href="{link}infos&gid={i}">
-		<img border="0" src="{dpath}gebaeude/batiment/{i}.png" align="top" width="{width}">
+		<img border="0" src="images/Games/batiment/{i}.png" align="top" width="{width}">
 		</a>
 	</td>
 	<td class="l">

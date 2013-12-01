@@ -1,6 +1,6 @@
 <table width="100%">
 	<tr>
-		<td colspan="2"><img src="images/Games/box.png" alt="box" title="box" {mobile} /></td>
+		<td colspan="2"><img src="images/Games/Banniere/box.png" alt="box" title="box" {mobile} /></td>
 	</tr>
 	<tr>
 		<td colspan="2"><h1>Formulaire</h1></td>

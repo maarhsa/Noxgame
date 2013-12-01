@@ -38,13 +38,13 @@
 	<th>{shortcut}</th>
 	<th>{show}</th>
 </tr><tr>
-	<th><img src="{dpath}img/e.gif" alt="">   {spy}</th>
+	<th><img src="images/Games/img/e.gif" alt="">   {spy}</th>
 	<th><input name="settings_esp"{user_settings_esp} type="checkbox" /></th>
 </tr><tr>
-	<th><img src="{dpath}img/m.gif" alt="">   {write_a_messege}</th>
+	<th><img src="images/Games/img/m.gif" alt="">   {write_a_messege}</th>
 	<th><input name="settings_wri"{user_settings_wri} type="checkbox" /></th>
 </tr><tr>
-	<th><img src="{dpath}img/b.gif" alt="">   {add_to_buddylist}</th>
+	<th><img src="images/Games/img/b.gif" alt="">   {add_to_buddylist}</th>
 	<th><input name="settings_bud"{user_settings_bud} type="checkbox" /></th>
 </tr>
 <tr>

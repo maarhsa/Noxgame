@@ -50,7 +50,7 @@ function t() {
 	if ( p > b.length - 2 ) {
 		document.getElementById("bx").innerHTML=aa ;
     } else {
-		document.getElementById("imgds").innerHTML='<img class="build" src="images/gebaeude/objet/'+ d +'.gif">';
+		document.getElementById("imgds").innerHTML='<img class="build" src="images/Games/item/'+ d +'.png">';
 		document.getElementById("namesthi").innerHTML=b[p];
 		document.getElementById("tempsd").innerHTML=h+":"+m+":"+s;
     }

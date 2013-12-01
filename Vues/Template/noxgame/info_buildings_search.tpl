@@ -7,7 +7,7 @@
 	<table>
 	<tbody>
 	<tr>
-		<td><img class='build' src="{dpath}gebaeude/recherche/{image}.png" align="top" border="0" height="120" width="120"></td>
+		<td><img class='build' src="images/Games/recherche/{image}.png" align="top" border="0" height="120" width="120"></td>
 		<td>{description}</td>
 	</tr>
 	</tbody>

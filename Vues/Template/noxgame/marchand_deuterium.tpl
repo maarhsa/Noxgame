@@ -21,7 +21,7 @@ function calcul() {
 <input type="hidden" name="ress" value="deuterium">
 <table width="100%">
 <tr>
-	<td colspan="3"><img src="images/Games/marchand/marchand.png" alt="{mod_ma_title}" title="{mod_ma_title}" {mobile}/><td>
+	<td colspan="3"><img src="images/Games/banniere/marchand.png" alt="{mod_ma_title}" title="{mod_ma_title}" {mobile}/><td>
 </tr>
 <tr>
 	<td class="c" colspan="3"><b>{mod_ma_buton}</b></td>
