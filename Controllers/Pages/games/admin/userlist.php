@@ -84,7 +84,7 @@
 			$Bloc['adm_ul_data_detai']  = ""; // Lien vers une page de details genre Empire
 			if($user['authlevel'] >= 3)
 			{
-				$Bloc['adm_ul_data_actio']  = "<a href=\"admin.php?page=listuser&cmd=dele&user=".$u['id']."\"><img src=\"". SITEURL ."images/login/false.png\"></a>"; // Lien vers actions 'effacer'
+				$Bloc['adm_ul_data_actio']  = "<a href=\"admin.php?page=listuser&cmd=dele&user=".$u['id']."\"><img src=\"". SITEURL ."images/Games/Admin/false.png\"></a>"; // Lien vers actions 'effacer'
 			}
 			elseif($user['authlevel'] >= 1)
 			{

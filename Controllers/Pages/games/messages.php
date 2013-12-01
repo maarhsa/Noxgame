@@ -218,7 +218,7 @@ $Message = trim ( nl2br ( strip_tags ( $_POST['text'], '<br>' ) ) ); }
 					$page .= "<th>". strip_tags($CurMess['message_subject']) ." ";
 					if ($CurMess['message_type'] == 1) {
 						$page .= "<a href=\"". INDEX_BASE ."messages&mode=write&amp;id=". $CurMess['message_sender'] ."&amp;subject=".$lang['mess_answer_prefix'] . htmlspecialchars( $CurMess['message_subject']) ."\">";
-						$page .= "<img src=\"". $dpath ."img/m.gif\" alt=\"".$lang['mess_answer']."\" border=\"0\"></a></th>";
+						$page .= "<img src=\"". SITEURL ."images/Games/Alliance/pic/m.gif\" alt=\"".$lang['mess_answer']."\" border=\"0\"></a></th>";
 					} else {
 						$page .= "</th>";
 					}
@@ -231,7 +231,7 @@ $Message = trim ( nl2br ( strip_tags ( $_POST['text'], '<br>' ) ) ); }
 						{
 							$border = "#393939";
 						}
-					$page .= "<td style=\"background :url('images/Games/img/fond.png');border : 1px solid ".$border.";border-radius: 4px;-moz-border-radius:4px;-webkit-border-radius:4px;\"; colspan=\"4\" class=\"b\">". stripslashes( nl2br( $CurMess['message_text'] ) ) ."</td>";
+					$page .= "<td style=\"background :url('". SITEURL ."images/Games/img/fond.png');border : 1px solid ".$border.";border-radius: 4px;-moz-border-radius:4px;-webkit-border-radius:4px;\"; colspan=\"4\" class=\"b\">". stripslashes( nl2br( $CurMess['message_text'] ) ) ."</td>";
 					$page .= "</tr>";
 				}
 			} else {
@@ -262,12 +262,12 @@ $Message = trim ( nl2br ( strip_tags ( $_POST['text'], '<br>' ) ) ); }
 						}
 						if ($CurMess['message_type'] == 1) {
 							$page .= "<a href=\"". INDEX_BASE ."messages&mode=write&amp;id=". $CurMess['message_sender'] ."&amp;subject=".$lang['mess_answer_prefix'] . htmlspecialchars( $CurMess['message_subject']) ."\">";
-							$page .= "<img src=\"". $dpath ."img/m.gif\" alt=\"".$lang['mess_answer']."\" border=\"0\"></a></th>";
+							$page .= "<img src=\"". SITEURL ."images/Games/Alliance/pic/m.gif\" alt=\"".$lang['mess_answer']."\" border=\"0\"></a></th>";
 						} else {
 							$page .= "</th>";
 						}
 						$page .= "</tr><tr>";
-						$page .= "<td style=\"background :url('images/Games/img/fond.png');border : 1px solid ".$border.";border-radius: 4px;-moz-border-radius:4px;-webkit-border-radius:4px;\"; colspan=\"4\" class=\"b\">". stripslashes( nl2br( $CurMess['message_text'] ) ) ."</td>";
+						$page .= "<td style=\"background :url('". SITEURL ."images/Games/img/fond.png');border : 1px solid ".$border.";border-radius: 4px;-moz-border-radius:4px;-webkit-border-radius:4px;\"; colspan=\"4\" class=\"b\">". stripslashes( nl2br( $CurMess['message_text'] ) ) ."</td>";
 						$page .= "</tr>";
 					}
 				}

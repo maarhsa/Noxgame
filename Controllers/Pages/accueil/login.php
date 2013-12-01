@@ -88,7 +88,6 @@ EOF;
 			<h3><b><i>L'occultation</i></b>permet de cacher temporairement sa ou ses flotte(s) au yeux des enemi(e)s , </h3>
 			<h3>mais attention au moment ou l'occultation est utilisé l'envoi de flotte est impossible car sinon vous risqueriez de révéler l'emplacement de votre ou vos flotte(s)!!!.</h3>
 			<h3>N'hésitez pas a invités vos ami(e)s pour rendre le jeu plus enrichissant.</h3>
-			<h3><img src=\"images/banniere/Banniere.png\" alt=\"Bannière Tenexia\" title=\"Bannière Tenexia\" /></h3>
 			<h2>Mandalorien.</h2>
 		</div>";
 	}

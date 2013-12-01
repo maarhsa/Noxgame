@@ -327,7 +327,6 @@ $_SESSION['nombre1']= rand(0,100);
 $_SESSION['nombre2']= rand(0,100);
 $_SESSION['secu'] = $_SESSION['nombre1'] + $_SESSION['nombre2'];
 
-    $parse['servername'] = '<img src="images/xnova.png" align="top" border="0" >';
     $parse['code_secu'] = "<th>Securite: </th>";
 	$parse['affiche'] = $_SESSION['nombre1']." + ".$_SESSION['nombre2']." = <input name='secu' size='3' maxlength='3' type='text'>";
 	$page = parsetemplate(gettemplate('registry_form'), $parse);
@@ -338,7 +337,6 @@ $_SESSION['secu'] = $_SESSION['nombre1'] + $_SESSION['nombre2'];
 	$parse['code_secu'] = "";
 	$parse['affiche'] = "";
 	$parse['secu'] = "capcha.php";
-    $parse['servername'] = '<img src="images/xnova.png" align="top" border="0" >';
     $page = parsetemplate(gettemplate('accueil/registry_form'), $parse);
 }
     display ($page,$title, false);

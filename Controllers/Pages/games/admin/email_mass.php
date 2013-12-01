@@ -49,10 +49,10 @@ if ($user['authlevel'] >= 3) {
   <table align="center" border="0" cellpadding="5" cellspacing="0">
     <tbody><tr>
       <td>
-        <a href="https://www.facebook.com/pages/Space-legacy/162665977224686?ref=hl" target="_blank"><img src="https://img.verticalresponse.com/social_sharing/social_sharing.placeholder.facebook.png" border="0"></a>
+        <a href="lien facebook" target="_blank"><img src="https://img.verticalresponse.com/social_sharing/social_sharing.placeholder.facebook.png" border="0"></a>
       </td>
       <td>
-        <a href="https://twitter.com/SpaceLegacy" target="_blank"><img src="https://img.verticalresponse.com/social_sharing/social_sharing.placeholder.twitter.png" border="0"></a>
+        <a href="lien twitter" target="_blank"><img src="https://img.verticalresponse.com/social_sharing/social_sharing.placeholder.twitter.png" border="0"></a>
       </td>
     </tr>
   </tbody></table>
@@ -64,7 +64,7 @@ if ($user['authlevel'] >= 3) {
 <table align="center" bgcolor="#000" border="0" cellpadding="0" cellspacing="0" width="650">
   <tbody><tr>
     <td colspan="3">
-    <a target="_blank" href="http://www.space-legacy.dafun.com/index.php?page=accueil"><img src="http://www.space-legacy.dafun.com/mail/haut.png" alt="space-Legacy" height="62" width="650"></a>
+    <a target="_blank" href="'.SITEURL.''ACCUEIL_BASE'accueil"><img src="http://www.space-legacy.dafun.com/mail/haut.png" alt="space-Legacy" height="62" width="650"></a>
 </td>
   </tr>
   <tr>

@@ -55,20 +55,20 @@ SQL;
 	$msg=preg_replace("#\[c=(blue|yellow|green|pink|red|orange)\](.+)\[/c\]#isU","<font color=\"$1\">$2</font>",$msg);
 
 
-	// Les smileys avec leurs raccourcis
-	$msg=preg_replace("#:c#isU","<img src=\"images/smileys/cry.gif\" align=\"absmiddle\" title=\":c\" alt=\":c\">",$msg);
-	$msg=preg_replace("#:/#isU","<img src=\"images/smileys/confused.gif\" align=\"absmiddle\" title=\":/\" alt=\":/\">",$msg);
-	$msg=preg_replace("#o0#isU","<img src=\"images/smileys/dizzy.gif\" align=\"absmiddle\" title=\"o0\" alt=\"o0\">",$msg);
-	$msg=preg_replace("#\^\^#isU","<img src=\"images/smileys/happy.gif\" align=\"absmiddle\" title=\"^^\" alt=\"^^\">",$msg);
-	$msg=preg_replace("#:D#isU","<img src=\"images/smileys/lol.gif\" align=\"absmiddle\" title=\":D\" alt=\":D\">",$msg);
-	$msg=preg_replace("#:\|#isU","<img src=\"images/smileys/neutral.gif\" align=\"absmiddle\" title=\":|\" alt=\":|\">",$msg);
-	$msg=preg_replace("#:\)#isU","<img src=\"images/smileys/smiley.gif\" align=\"absmiddle\" title=\":)\" alt=\":)\">",$msg);
-	$msg=preg_replace("#:o#isU","<img src=\"images/smileys/omg.gif\" align=\"absmiddle\" title=\":o\" alt=\":o\">",$msg);
-	$msg=preg_replace("#:p#isU","<img src=\"images/smileys/tongue.gif\" align=\"absmiddle\" title=\":p\" alt=\":p\">",$msg);
-	$msg=preg_replace("#:\(#isU","<img src=\"images/smileys/sad.gif\" align=\"absmiddle\" title=\":(\" alt=\":(\">",$msg);
-	$msg=preg_replace("#;\)#isU","<img src=\"images/smileys/wink.gif\" align=\"absmiddle\" title=\";)\" alt=\";)\">",$msg);
-	$msg=preg_replace("#:s#isU","<img src=\"images/smileys/embarrassed.gif\" align=\"absmiddle\" title=\":s\" alt=\":s\">",$msg);
-	$msg=preg_replace("#hihi#isU","<img src=\"images/smileys/shit.gif\" align=\"absmiddle\" title=\"hihi\" alt=\"hihi\">",$msg);
+	// Les smileys avec leurs raccourcis". SITEURL ."images/Alliance/pic/abort.gif
+	$msg=preg_replace("#:c#isU","<img src=\"". SITEURL ."images/Games/smileys/cry.gif\" align=\"absmiddle\" title=\":c\" alt=\":c\">",$msg);
+	$msg=preg_replace("#:/#isU","<img src=\"". SITEURL ."images/Games/smileys/confused.gif\" align=\"absmiddle\" title=\":/\" alt=\":/\">",$msg);
+	$msg=preg_replace("#o0#isU","<img src=\"". SITEURL ."images/Games/smileys/dizzy.gif\" align=\"absmiddle\" title=\"o0\" alt=\"o0\">",$msg);
+	$msg=preg_replace("#\^\^#isU","<img src=\"". SITEURL ."images/Games/smileys/happy.gif\" align=\"absmiddle\" title=\"^^\" alt=\"^^\">",$msg);
+	$msg=preg_replace("#:D#isU","<img src=\"". SITEURL ."images/Games/smileys/lol.gif\" align=\"absmiddle\" title=\":D\" alt=\":D\">",$msg);
+	$msg=preg_replace("#:\|#isU","<img src=\"". SITEURL ."images/Games/smileys/neutral.gif\" align=\"absmiddle\" title=\":|\" alt=\":|\">",$msg);
+	$msg=preg_replace("#:\)#isU","<img src=\"". SITEURL ."images/Games/smileys/smiley.gif\" align=\"absmiddle\" title=\":)\" alt=\":)\">",$msg);
+	$msg=preg_replace("#:o#isU","<img src=\"". SITEURL ."images/Games/smileys/omg.gif\" align=\"absmiddle\" title=\":o\" alt=\":o\">",$msg);
+	$msg=preg_replace("#:p#isU","<img src=\"". SITEURL ."images/Games/smileys/tongue.gif\" align=\"absmiddle\" title=\":p\" alt=\":p\">",$msg);
+	$msg=preg_replace("#:\(#isU","<img src=\"". SITEURL ."images/Games/smileys/sad.gif\" align=\"absmiddle\" title=\":(\" alt=\":(\">",$msg);
+	$msg=preg_replace("#;\)#isU","<img src=\"". SITEURL ."images/Games/smileys/wink.gif\" align=\"absmiddle\" title=\";)\" alt=\";)\">",$msg);
+	$msg=preg_replace("#:s#isU","<img src=\"". SITEURL ."images/Games/smileys/embarrassed.gif\" align=\"absmiddle\" title=\":s\" alt=\":s\">",$msg);
+	$msg=preg_replace("#hihi#isU","<img src=\"". SITEURL ."images/Games/smileys/shit.gif\" align=\"absmiddle\" title=\"hihi\" alt=\"hihi\">",$msg);
 	
 
 	  // Couleur personnalisée selon

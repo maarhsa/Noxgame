@@ -53,7 +53,7 @@ $parse = $lang;
             $color = "#FFFFFF";
 		if($user['authlevel'] >= 1)
 		{
-			$droit = "<th class=b><a href=?delete=".$e['messageid']."><img src=\"". SITEURL ."Vues/images/login/r1.png\" border=\"0\"></a></th></tr>";
+			$droit = "<th class=b><a href=?delete=".$e['messageid']."><img src=\"". SITEURL ."images/Games/Alliance/r1.png\" border=\"0\"></a></th></tr>";
 		}
 		else
 		{

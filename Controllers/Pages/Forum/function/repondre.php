@@ -124,9 +124,9 @@
 					$repondre .='<h2>Smiley</h2>';
 					$repondre .="<p><table>
 									<tr>
-										<td><img src=\"images/emoticones/cry.png\" alt=\"pleuré\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]cry[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/dangerous.png\" alt=\"Dangereux\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]dangerous[/smiley]')\"/></td>
-										<td><img src=\"images/emoticones/evil.png\" alt=\"demon\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]evil[/smiley]')\"/></td>
+										<td><img src=\"images/Games/emoticones/cry.png\" alt=\"pleuré\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]cry[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/dangerous.png\" alt=\"Dangereux\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]dangerous[/smiley]')\"/></td>
+										<td><img src=\"images/Games/emoticones/evil.png\" alt=\"demon\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]evil[/smiley]')\"/></td>
 									</tr>
 									<tr>
 										<td>cry</td>
@@ -134,9 +134,9 @@
 										<td>evil</td>
 									</tr>
 									<tr>
-										<td><img src=\"images/emoticones/gomennasai.png\" alt=\"gomennasai\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]gomennasai[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/hoho.png\" alt=\"hoho\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]hoho[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/nyu.png\" alt=\"nyu\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]nyu[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/gomennasai.png\" alt=\"gomennasai\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]gomennasai[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/hoho.png\" alt=\"hoho\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]hoho[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/nyu.png\" alt=\"nyu\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]nyu[/smiley]')\" /></td>
 									</tr>
 									<tr>
 										<td>gomennasai</td>
@@ -144,9 +144,9 @@
 										<td>nyu</td>
 									</tr>
 									<tr>
-										<td><img src=\"images/emoticones/reallyangry.png\" alt=\"en colere\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]reallyangry[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/shamed.png\" alt=\"géné\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]shamed[/smiley]')\" /></td>	
-										<td><img src=\"images/emoticones/socute.png\" alt=\"adoré\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]socute[/smiley]')\"/></td>
+										<td><img src=\"images/Games/emoticones/reallyangry.png\" alt=\"en colere\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]reallyangry[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/shamed.png\" alt=\"géné\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]shamed[/smiley]')\" /></td>	
+										<td><img src=\"images/Games/emoticones/socute.png\" alt=\"adoré\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]socute[/smiley]')\"/></td>
 									</tr>
 									<tr>
 										<td>reallyangry</td>
@@ -154,9 +154,9 @@
 										<td>socute</td>
 									</tr>
 									<tr>
-										<td><img src=\"images/emoticones/sorry.png\" alt=\"désolé\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]sorry[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/what.png\" alt=\"quoi\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]what[/smiley]')\" /></td>
-										<td><img src=\"images/emoticones/xd.png\" alt=\"xd\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]xd[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/sorry.png\" alt=\"désolé\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]sorry[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/what.png\" alt=\"quoi\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]what[/smiley]')\" /></td>
+										<td><img src=\"images/Games/emoticones/xd.png\" alt=\"xd\" width=\"50\" height=\"50\" onClick=\"addForum('[smiley]xd[/smiley]')\" /></td>
 									</tr>
 									<tr>
 										<td>sorry</td>

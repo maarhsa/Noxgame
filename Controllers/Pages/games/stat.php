@@ -203,7 +203,7 @@
 			} else {
 				$parse['player_name']     = $UsrRow['username'];
 			}
-			$parse['player_mes']      = "<a href=\"". INDEX_BASE ."messages&mode=write&id=" . $UsrRow['id'] . "\"><img src=\"" . $dpath . "img/m.gif\" border=\"0\" alt=\"". ucfirst($lang['Ecrire'])."\" /></a>";
+			$parse['player_mes']      = "<a href=\"". INDEX_BASE ."messages&mode=write&id=" . $UsrRow['id'] . "\"><img src=\"". SITEURL ."images/Games/Alliance/pic/m.gif\" border=\"0\" alt=\"". ucfirst($lang['Ecrire'])."\" /></a>";
 			if ($UsrRow['ally_name'] == $user['ally_name']) {
 				$parse['player_alliance'] = "<font color=\"#33CCFF\">".$UsrRow['ally_name']."</font>";
 			} else {

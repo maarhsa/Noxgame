@@ -320,7 +320,7 @@ $lang['link'] = INDEX_BASE;
 				if ($ally['ally_owner'] == $user['id']) {
 					// $i++;u2r5
 					$lang['id'] = $a;
-					$lang['delete'] = "<a href=\"". INDEX_BASE ."alliance&mode=admin&edit=rights&d={$a}\"><img src=\"{$dpath}pic/abort.gif\" alt=\"{$lang['Delete_range']}\" border=0></a>";
+					$lang['delete'] = "<a href=\"". INDEX_BASE ."alliance&mode=admin&edit=rights&d={$a}\"><img src=\"". SITEURL ."images/Games/Alliance/pic/abort.gif\" alt=\"{$lang['Delete_range']}\" border=0></a>";
 					$lang['r0'] = $b['name'];
 					$lang['a'] = $a;
 					$lang['r1'] = "<input type=checkbox name=\"u{$a}r0\"" . (($b['delete'] == 1)?' checked="checked"':'') . ">"; //{$b[1]}
@@ -338,7 +338,7 @@ $lang['link'] = INDEX_BASE;
 				} else {
 					$lang['id'] = $a;
 					$lang['r0'] = $b['name'];
-					$lang['delete'] = "<a href=\"". INDEX_BASE ."alliance&mode=admin&edit=rights&d={$a}\"><img src=\"{$dpath}pic/abort.gif\" alt=\"{$lang['Delete_range']}\" border=0></a>";
+					$lang['delete'] = "<a href=\"". INDEX_BASE ."alliance&mode=admin&edit=rights&d={$a}\"><img src=\"". SITEURL ."images/Games/Alliance/pic/abort.gif\" alt=\"{$lang['Delete_range']}\" border=0></a>";
 					$lang['a'] = $a;
 					$lang['r1'] = "<b>-</b>";
 					$lang['r2'] = "<input type=checkbox name=\"u{$a}r1\"" . (($b['kick'] == 1)?' checked="checked"':'') . ">";
