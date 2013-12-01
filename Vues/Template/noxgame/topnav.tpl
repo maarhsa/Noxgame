@@ -2,22 +2,22 @@
 <u><i>Principal</i></u>
 	<table class="officier">
 		<tr>
-			<td class="officier_img"><a href="{link}officier&type=mineur" alt="{mineur_offi}" title="{officier} {mineur_offi}"><img class="arrondie" {border1} src="{dpath}officiers/{design1}.jpg" alt="mineur" title="{officier} {mineur_offi}" /></a></td>
+			<td class="officier_img"><a href="{link}officier&type=mineur" alt="{mineur_offi}" title="{officier} {mineur_offi}"><img class="arrondie" {border1} src="{dpath}Games/officiers/{design1}.jpg" alt="mineur" title="{officier} {mineur_offi}" /></a></td>
 		</tr>
 		<tr>
-			<td class="officier_img"><a href="{link}officier&type=raideur" alt="{raideur_offi}" title="{officier} {raideur_offi}"><img class="arrondie" {border2} src="{dpath}officiers/{design2}.jpg" alt="{raideur_offi}" title="{officier} {raideur_offi}" /></a></td>
+			<td class="officier_img"><a href="{link}officier&type=raideur" alt="{raideur_offi}" title="{officier} {raideur_offi}"><img class="arrondie" {border2} src="{dpath}Games/officiers/{design2}.jpg" alt="{raideur_offi}" title="{officier} {raideur_offi}" /></a></td>
 		</tr>
 		<tr>
-			<td class="officier_img"><a href="{link}officier&type=technopere" alt="{techno_offi}" title="{officier} {techno_offi}"><img class="arrondie" {border3} src="{dpath}officiers/{design3}.jpg" alt="{techno_offi}" title="{officier} {techno_offi}"/></a></td>
+			<td class="officier_img"><a href="{link}officier&type=technopere" alt="{techno_offi}" title="{officier} {techno_offi}"><img class="arrondie" {border3} src="{dpath}Games/officiers/{design3}.jpg" alt="{techno_offi}" title="{officier} {techno_offi}"/></a></td>
 		</tr>
 		<tr>
-			<td class="officier_img"><a href="{link}officier&type=defenseur" alt="{defense_offi}" title="{officier} {defense_offi}"><img class="arrondie" {border4} src="{dpath}officiers/{design4}.jpg" alt="{defense_offi}" title="{officier} {defense_offi}"/></a></td>
+			<td class="officier_img"><a href="{link}officier&type=defenseur" alt="{defense_offi}" title="{officier} {defense_offi}"><img class="arrondie" {border4} src="{dpath}Games/officiers/{design4}.jpg" alt="{defense_offi}" title="{officier} {defense_offi}"/></a></td>
 		</tr>
 	</table>
 <u><i>Bonus</i></u>
 	<table class="officier">
 		<tr>
-			<td class="officier_img"><a href="{link}officier&type=alliance" alt="{alliance_offi}" title="{officier} {alliance_offi}"><img class="arrondie" {border5} src="{dpath}officiers/{design5}.jpg" alt="{alliance_offi}" title="{officier} {alliance_offi}" /></a></td>
+			<td class="officier_img"><a href="{link}officier&type=alliance" alt="{alliance_offi}" title="{officier} {alliance_offi}"><img class="arrondie" {border5} src="{dpath}Games/officiers/{design5}.jpg" alt="{alliance_offi}" title="{officier} {alliance_offi}" /></a></td>
 		</tr>
 	</table>
 </div>
