@@ -66,7 +66,7 @@ div.hauteur
 
 div.corp,div.corp_login,table.info,div.hauteur,div.footer
 {
-	background-image:url('../images/font/fond.png');/* le background */
+	background-image:url('../images/login/fond.png');/* le background */
 	-webkit-box-shadow : 0px 0px 5px #3d0097; /* Ajoute de l'ombre sur le contour pour Chrome, Safari */
 	box-shadow : 0px 0px 5px #3d0097;/* Ajoute de l'ombre */
 }
@@ -185,7 +185,7 @@ input[type=submit].facebook:focus
 }
 
 a:hover.humain:before,a:hover.minbari:before,a:hover.centauri:before,a:hover.narn:before,a:hover.ombre:before,a:hover.vorlon:before{
-	background:url('../images/font/fond.png');/* le background */
+	background:url('../images/login/fond.png');/* le background */
 	content:attr(data-tooltip);
     position:absolute;
     color:#fff;
