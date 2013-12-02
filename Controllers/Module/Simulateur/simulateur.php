@@ -42,8 +42,8 @@ if ($_POST)
 		}
 	}
 	
-	if($user['vote'] >= 2)
-	{
+	// if($user['vote'] >= 2)
+	// {
 		if (isset($_POST['submit']) and $PresenceFlotteTarget AND $PresenceFlotteCurrent) {
 			
 			/*//update du vote
@@ -78,9 +78,9 @@ if ($_POST)
 		}else{
 			message("Combat impossible! Il semblerait que le nombre de vaisseaux dans l'un des deux camps soit nul.","Erreur simulation");
 		}
-	}else{
-		message("Combat impossible! Il semblerait que vous n'avaient pas assez votes.","Erreur simulation");
-	}	
+	// }else{
+		// message("Combat impossible! Il semblerait que vous n'avaient pas assez votes.","Erreur simulation");
+	// }	
 	
 }else{
 	$parse['military'] 	= ($user['military_tech'] != '') ? $user['military_tech'] : 0; 
