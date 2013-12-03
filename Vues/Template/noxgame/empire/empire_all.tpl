@@ -4,7 +4,7 @@
 
 <tr>
 	<th>{image}</th>
-	<th><img src="images/Games/planete/min/min_{planet_image}.jpg" /></th>
+	<th><img src="images/Games/planete/min/min_{planet_image}.jpg" title="{planet_name}" alt="{planet_name}" width="100"/></th>
 </tr>
 
 <tr>

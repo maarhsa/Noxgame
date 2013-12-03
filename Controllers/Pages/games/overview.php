@@ -296,7 +296,7 @@ switch ($mode) {
                     $PlanetID = $planetrow['id'];
                     $Build = InsertBuildListScript ("overview");
 					
-					$Build .='<img border="0" src="'.$dpath.'gebaeude/batiment/'.$CurrBuild[0].'.png" align="top" width="'.$width.'"><br>';
+					$Build .='<a href="'. INDEX_BASE .'infos&gid='.$CurrBuild[0].'" title="'.$lang['tech'][$CurrBuild[0]].'"><img border="0" src="'.$dpath.'Games/batiment/'.$CurrBuild[0].'.png" align="top" width="'.$width.'" title="'.$lang['tech'][$CurrBuild[0]].'" alt="'.$lang['tech'][$CurrBuild[0]].'"></a><br>';
                     $Build .= $lang['tech'][$CurrBuild[0]] . ' (' . ($CurrBuild[1]) . ')';
                     $Build .= "<br /><div id=\"blc\" class=\"z\">" . pretty_time($RestTime) . "</div>";
                     $Build .= "\n<script language=\"JavaScript\">";

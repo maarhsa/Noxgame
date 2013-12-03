@@ -50,7 +50,7 @@ SQL;
 			$ThisPlanet = doquery($Query, 'planets', true);
 			
 			$parse['dpath'] = $dpath;
-			$parse['planet_image'] = htmlentities($ThisPlanet['image']);
+			$parse['planet_image'] = typeplanets($user,$ThisPlanet['planet']);
 			$parse['planet_name'] = htmlentities($ThisPlanet['name']);
 			$parse['planet_field_current'] = intval($ThisPlanet['field_current']);
 			$parse['planet_field_max'] = intval($ThisPlanet['field_max']);

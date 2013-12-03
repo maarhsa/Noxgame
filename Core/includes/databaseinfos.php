@@ -312,7 +312,7 @@
 	$QryTableGalaxy     .= ") ENGINE=MyISAM;";
 
 /****************************************************************************/
-/*						LE FORUM DE XNOVA INTEGRER							*/
+/*						LE FORUM DE NOXGAME INTEGRER						*/
 /*==========================================================================*/
 	// Table categorie
 	$QryTableCategorie      = "CREATE TABLE `{{table}}` ( ";
@@ -322,6 +322,11 @@
 	$QryTableCategorie      .= "PRIMARY KEY (`cat_id`),";
 	$QryTableCategorie      .= "UNIQUE KEY `cat_ordre` (`cat_ordre`)";
 	$QryTableCategorie      .= ") ENGINE=MyISAM;";
+	
+	$QryInsertCategorie 	="INSERT INTO `{{table}}`";
+	$QryInsertCategorie		.="(`cat_nom`, `cat_ordre`) VALUES";
+	$QryInsertCategorie 	.="('Section Interne', '1'),";
+	$QryInsertCategorie 	.="('Section Externe', '2');";
 	
 	// Table des forums
 	$QryTableForum      = "CREATE TABLE `{{table}}` ( ";
@@ -340,6 +345,11 @@
 	$QryTableForum      .= "`auth_modo` tinyint(4) NOT NULL,";
 	$QryTableForum      .= "PRIMARY KEY (`forum_id`)";
 	$QryTableForum      .= ") ENGINE=MyISAM;";
+	
+	$QryInsertForum 	="INSERT INTO `{{table}}`";
+	$QryInsertForum		.="(`forum_cat_id`, `forum_name`,`forum_desc`,`forum_ordre`,`forum_last_post_id`,`forum_topic`,`forum_post`,`auth_view`,`auth_post`,`auth_topic`,`auth_annonce`,`auth_modo`) VALUES";
+	$QryInsertForum 	.="('1', 'administration','inutile','1','0','0','0','0','0','0','0','0'),";
+	$QryInsertForum 	.="('2', 'taverne','inutile','1','0','0','0','0','0','0','0','0');";
 	
 	// Table des sujets
 	$QryTableTopic      = "CREATE TABLE `{{table}}` ( ";
@@ -368,7 +378,7 @@
 	$QryTablePosts      .= ") ENGINE=MyISAM;";
 
 /****************************************************************************/
-/*						FIN DU FORUM DE XNOVA INTEGRER						*/
+/*						FIN DU FORUM DE NOXGAME INTEGRER					*/
 /*==========================================================================*/
 	// Table iraks
 	$QryTableIraks       = "CREATE TABLE `{{table}}` ( ";
@@ -645,6 +655,7 @@
 	$QryTableUsers      .= "`email_2` varchar(64) character set latin1 NOT NULL default '', ";
 	$QryTableUsers      .= "`lang` varchar(8) character set latin1 NOT NULL default 'fr', ";
 	$QryTableUsers      .= "`authlevel` tinyint(4) NOT NULL default '0', ";
+	$QryTableUsers      .= "`record` int(1) NOT NULL DEFAULT '1', ";
 	$QryTableUsers      .= "`sex` char(1) character set latin1 default NULL, ";
 	$QryTableUsers      .= "`avatar` varchar(255) character set latin1 NOT NULL default '', ";
 	$QryTableUsers      .= "`signature` text NOT NULL,";

@@ -63,30 +63,45 @@ foreach($lang['tech'] as $element => $elementName)
 if(!empty($elementName) && !empty($resource[$element]))
 {
 $data = array();
+
+$norecordp  = doquery("SELECT * FROM {{table}} WHERE `record` = '0';", 'users');
+$ShowPlayerRecords = "";
+while ($RecPlayer = mysql_fetch_array($norecordp))
+{
+	$ShowPlayerRecords .= "AND u.id !=".$RecPlayer['id']."";
+}
 $ConditionShowAdmin = SHOW_ADMIN_IN_RECORDS == 0 ? "AND u.authlevel = 0 " : "";
+// $ShowPlayerRecords = SHOW_PLAYER_IN_RECORDS == 0 ? "AND u.id != 2 " : "";
 
 if(in_array($element, $reslist['build']) || in_array($element, $reslist['fleet']) || in_array($element, $reslist['defense']))
 {
 
 
 $Qry = <<<SQL
-SELECT IF(COUNT(DISTINCT u.username)<= 10, GROUP_CONCAT(DISTINCT u.username ORDER BY u.username DESC SEPARATOR ", "),"Plus de 10 joueurs ont ce record") AS players, p.{$resource[$element]} AS level
+SELECT IF(COUNT(DISTINCT u.username)<= 3, GROUP_CONCAT(DISTINCT u.username ORDER BY u.username DESC SEPARATOR ", "),"Plus de 3 joueurs ont ce record") AS players, p.{$resource[$element]} AS level
 FROM {{table}}users AS u
-LEFT JOIN {{table}}planets AS p ON p.{$resource[$element]} = (SELECT MAX(`{$resource[$element]}`) FROM {{table}}planets AS p LEFT JOIN {{table}}users AS u ON (u.id=p.id_owner) WHERE p.{$resource[$element]} > 0 {$ConditionShowAdmin} )
-WHERE u.id = p.id_owner {$ConditionShowAdmin}
+LEFT JOIN {{table}}planets AS p ON p.{$resource[$element]} = (SELECT MAX(`{$resource[$element]}`) FROM {{table}}planets AS p LEFT JOIN {{table}}users AS u ON (u.id=p.id_owner) WHERE p.{$resource[$element]} > 0 {$ConditionShowAdmin} {$ShowPlayerRecords})
+WHERE u.id = p.id_owner {$ConditionShowAdmin} {$ShowPlayerRecords}
 GROUP BY p.{$resource[$element]} ORDER BY u.username ASC
 SQL;
 $record = doquery($Qry, '', true);
 }
 else if(in_array($element, $reslist['tech']))
 {
+$norecordp  = doquery("SELECT * FROM {{table}} WHERE `record` = '0';", 'users');
+$ShowPlayerRecords = "";
+while ($RecPlayer = mysql_fetch_array($norecordp))
+{
+	$ShowPlayerRecords .= "AND u.id !=".$RecPlayer['id']."";
+}
 $ShowAdminRecords = SHOW_ADMIN_IN_RECORDS == 0 ? "WHERE authlevel = 0 " : "";
+// $ShowPlayerRecords = SHOW_PLAYER_IN_RECORDS == 0 ? "AND u.id != 2 " : "";
 
 $record = doquery(sprintf(
-'SELECT IF(COUNT(u.username)<=10,GROUP_CONCAT(DISTINCT u.username ORDER BY u.username DESC SEPARATOR ", "),"Plus de 10 joueurs ont ce record") AS players, u.%1$s AS level ' .
+'SELECT IF(COUNT(u.username)<=3,GROUP_CONCAT(DISTINCT u.username ORDER BY u.username DESC SEPARATOR ", "),"Plus de 3 joueurs ont ce record") AS players, u.%1$s AS level ' .
 'FROM {{table}}users AS u ' .
 'WHERE u.%1$s=(SELECT MAX(u2.%1$s) FROM {{table}}users AS u2 %2$s) AND u.%1$s>0 '. $ConditionShowAdmin .
-'GROUP BY u.%1$s ORDER BY u.username ASC', $resource[$element], $ShowAdminRecords), '', true);
+' '. $ShowPlayerRecords .' GROUP BY u.%1$s ORDER BY u.username ASC', $resource[$element], $ShowAdminRecords,$ShowPlayerRecords), '', true);
 }
 else
 {

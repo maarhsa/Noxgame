@@ -109,18 +109,18 @@ function bbcodereverse($string) {
 
 function remplacer($string)
 {
-		$string = str_replace("http://greveladory.org/images/emoticones/evil.png", "evil", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/cry.png", "cry", $string);
-		$string = str_replace("http://greveladory.org/images/emoticones/dangerous.png", "dangerous", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/gomennasai.png", "gomennasai", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/hoho.png", "hoho", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/nyu.png", "nyu", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/reallyangry.png", "reallyangry", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/shamed.png", "shamed", $string);
-        $string = str_replace("http://greveladory.org/images/emoticones/socute.png", "socute", $string);
-		$string = str_replace("http://greveladory.org/images/emoticones/sorry.png", "sorry", $string);
-		$string = str_replace("http://greveladory.org/images/emoticones/what.png", "what", $string);
-		$string = str_replace("http://greveladory.org/images/emoticones/xd.png", "xd", $string);
+		$string = str_replace("". SITEURL ."images/Games/emoticones/evil.png", "evil", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/cry.png", "cry", $string);
+		$string = str_replace("". SITEURL ."images/Games/emoticones/dangerous.png", "dangerous", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/gomennasai.png", "gomennasai", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/hoho.png", "hoho", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/nyu.png", "nyu", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/reallyangry.png", "reallyangry", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/shamed.png", "shamed", $string);
+        $string = str_replace("". SITEURL ."images/Games/emoticones/socute.png", "socute", $string);
+		$string = str_replace("". SITEURL ."images/Games/emoticones/sorry.png", "sorry", $string);
+		$string = str_replace("". SITEURL ."images/Games/emoticones/what.png", "what", $string);
+		$string = str_replace("". SITEURL ."images/Games/emoticones/xd.png", "xd", $string);
 	
 	return $string;
 }
@@ -132,18 +132,18 @@ function image($string)
 
 
 		//Emoticones.... COPIEZ COLLEZ CES LIGNES POUR RAJOUTER LES VOTRES !
-        $string = str_replace("cry", "[img]".SITEURL."images/emoticones/cry.png[/img]", $string);
-		$string = str_replace("dangerous", "[img]".SITEURL."images/emoticones/dangerous.png[/img]", $string);
-        $string = str_replace("evil", "[img]".SITEURL."images/emoticones/evil.png[/img]", $string);
-        $string = str_replace("gomennasai", "[img]".SITEURL."images/emoticones/gomennasai.png[/img]", $string);
-        $string = str_replace("hoho", "[img]".SITEURL."images/emoticones/hoho.png[/img]", $string);
-        $string = str_replace("nyu", "[img]".SITEURL."images/emoticones/nyu.png[/img]", $string);
-        $string = str_replace("reallyangry", "[img]".SITEURL."images/emoticones/reallyangry.png[/img]", $string);
-        $string = str_replace("shamed", "[img]".SITEURL."images/emoticones/shamed.png[/img]", $string);
-        $string = str_replace("socute", "[img]".SITEURL."images/emoticones/socute.png[/img]", $string);
-		$string = str_replace("sorry", "[img]".SITEURL."images/emoticones/sorry.png[/img]", $string);
-		$string = str_replace("what", "[img]".SITEURL."images/emoticones/what.png[/img]", $string);
-		$string = str_replace("xd", "[img]".SITEURL."images/emoticones/xd.png[/img]", $string);
+        $string = str_replace("cry", "[img]".SITEURL."images/Games/emoticones/cry.png[/img]", $string);
+		$string = str_replace("dangerous", "[img]".SITEURL."images/Games/emoticones/dangerous.png[/img]", $string);
+        $string = str_replace("evil", "[img]".SITEURL."images/Games/emoticones/evil.png[/img]", $string);
+        $string = str_replace("gomennasai", "[img]".SITEURL."images/Games/emoticones/gomennasai.png[/img]", $string);
+        $string = str_replace("hoho", "[img]".SITEURL."images/Games/emoticones/hoho.png[/img]", $string);
+        $string = str_replace("nyu", "[img]".SITEURL."images/Games/emoticones/nyu.png[/img]", $string);
+        $string = str_replace("reallyangry", "[img]".SITEURL."images/Games/emoticones/reallyangry.png[/img]", $string);
+        $string = str_replace("shamed", "[img]".SITEURL."images/Games/emoticones/shamed.png[/img]", $string);
+        $string = str_replace("socute", "[img]".SITEURL."images/Games/emoticones/socute.png[/img]", $string);
+		$string = str_replace("sorry", "[img]".SITEURL."images/Games/emoticones/sorry.png[/img]", $string);
+		$string = str_replace("what", "[img]".SITEURL."images/Games/emoticones/what.png[/img]", $string);
+		$string = str_replace("xd", "[img]".SITEURL."images/Games/emoticones/xd.png[/img]", $string);
         return $string;
         }
 
@@ -154,18 +154,18 @@ function image($string)
 
 
 		//Emoticones.... COPIEZ COLLEZ CES LIGNES POUR RAJOUTER LES VOTRES !
-        $string = str_replace("cry", "".SITEURL."images/emoticones/cry.png", $string);
-		$string = str_replace("dangerous", "".SITEURL."images/emoticones/dangerous.png", $string);
-        $string = str_replace("evil", "".SITEURL."images/emoticones/evil.png", $string);
-        $string = str_replace("gomennasai", "".SITEURL."images/emoticones/gomennasai.png", $string);
-        $string = str_replace("hoho", "".SITEURL."images/emoticones/hoho.png", $string);
-        $string = str_replace("nyu", "".SITEURL."images/emoticones/nyu.png", $string);
-        $string = str_replace("reallyangry", "".SITEURL."images/emoticones/reallyangry.png", $string);
-        $string = str_replace("shamed", "".SITEURL."images/emoticones/shamed.png", $string);
-        $string = str_replace("socute", "".SITEURL."images/emoticones/socute.png", $string);
-		$string = str_replace("sorry", "".SITEURL."images/emoticones/sorry.png", $string);
-		$string = str_replace("what", "".SITEURL."images/emoticones/what.png", $string);
-		$string = str_replace("xd", "".SITEURL."images/emoticones/xd.png", $string);
+        $string = str_replace("cry", "".SITEURL."images/Games/emoticones/cry.png", $string);
+		$string = str_replace("dangerous", "".SITEURL."images/Games/emoticones/dangerous.png", $string);
+        $string = str_replace("evil", "".SITEURL."images/Games/emoticones/evil.png", $string);
+        $string = str_replace("gomennasai", "".SITEURL."images/Games/emoticones/gomennasai.png", $string);
+        $string = str_replace("hoho", "".SITEURL."images/Games/emoticones/hoho.png", $string);
+        $string = str_replace("nyu", "".SITEURL."images/Games/emoticones/nyu.png", $string);
+        $string = str_replace("reallyangry", "".SITEURL."images/Games/emoticones/reallyangry.png", $string);
+        $string = str_replace("shamed", "".SITEURL."images/Games/emoticones/shamed.png", $string);
+        $string = str_replace("socute", "".SITEURL."images/Games/emoticones/socute.png", $string);
+		$string = str_replace("sorry", "".SITEURL."images/Games/emoticones/sorry.png", $string);
+		$string = str_replace("what", "".SITEURL."images/Games/emoticones/what.png", $string);
+		$string = str_replace("xd", "".SITEURL."images/Games/emoticones/xd.png", $string);
         return $string;
         }
 

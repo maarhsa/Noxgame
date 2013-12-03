@@ -63,13 +63,53 @@
 				//on s'occupe de l'affichage du Sujet avec ses ses messages
 				$QryForumSujet = "SELECT * FROM {{table}} WHERE `topic_id`='".$idsujet."' ORDER BY `topic_time` DESC";
 				$Forum_Sujets_query = doquery ($QryForumSujet, 'forum_topic',true);
+				
+				
+				//systeme de pagination -_-'
+				$messagesParPage=COUNT_MESSAGES_PAGE; //Nous allons afficher 20 messages par page.
+				 
+				//Nous allons maintenant compter le nombre de pages.
+				$nombreDePages=ceil(intval($Forum_Sujets_query['topic_post'])/$messagesParPage);
+				if(isset($_GET['t'])) // Si la variable $_GET['page'] existe...
+				{
+					//on va sécurisé un peu tous ca ^^
+					$pageActuelle=intval($_GET['t']);
+					if(!is_numeric($_GET['t']))
+					{
+						$pageActuelle=1;
+					}
+					elseif($pageActuelle>$nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
+					{
+						$pageActuelle=$nombreDePages;
+					}
+					elseif($_GET['t']<=0) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
+					{
+						$pageActuelle=1;
+					}
+				}
+				else // Sinon
+				{
+					 $pageActuelle=1; // La page actuelle est la n°1    
+				}
+				
 				$sujet ='<script type="text/javascript" src="script/forum.js"></script>';
 				$sujet .='<div class="description">'.stripslashes(htmlentities($Forum_Sujets_query['topic_titre'])).'</div>';
 				$sujet .='<table class="section" RULES="BASIC">';
 				$sujet .='<tr>';
-				$sujet .='<td class="pagination">Pages : ';
-				
-				$sujet .='<a href="Forum.php?page=accueil" title="Forum">Forum</a> /<a href="Forum.php?page=accueil&type=section&f='.$idforum.'" title="'.$Forum_Forum_query['forum_name'].'">'.stripslashes(htmlentities($Forum_Forum_query['forum_name'])).'</a> /</td>';
+				$sujet .='<td class="pagination"><font style="text-align:left;">Pages : ';
+				for($u=1; $u<=$nombreDePages; $u++) //On fait notre boucle
+				{
+					 //On va faire notre condition
+					 if($u==$pageActuelle) //Si il s'agit de la page actuelle...
+					 {
+						 $sujet .=' [ '.$u.' ]'; 
+					 }	
+					 else //Sinon...
+					 {
+						  $sujet .=' <a href="Forum.php?page=accueil&type=section&f='.$idforum.'&s='.$idsujet.'&t='.intval($u).'" title="Page numéro '.intval($u).'">'.intval($u).'</a>';
+					 }
+				}
+				$sujet .='</font><br><a href="Forum.php?page=accueil" title="Forum">Forum</a> /<a href="Forum.php?page=accueil&type=section&f='.$idforum.'" title="'.$Forum_Forum_query['forum_name'].'">'.stripslashes(htmlentities($Forum_Forum_query['forum_name'])).'</a> /</td>';
 				$sujet .='<td class="newmsgs"><a class="button" href="Forum.php?page=accueil&type=section&f='.$idforum.'&sujet=nouveau&token='.$_SESSION['CSRF'].'" title="Nouveau sujet">Nouveau sujet</a> <a class="button" href="Forum.php?page=accueil&type=section&f='.$idforum.'&s='.$idsujet.'&sujet=repondre&token='.$_SESSION['CSRF'].'" title="Répondre">Répondre</a></td>';
 				$sujet .='</tr>';
 				$sujet .='<tr class="title">';
@@ -77,8 +117,9 @@
 				$sujet .='<th class="newmsgs">vues '.intval($Forum_Sujets_query['topic_vu']).' </th>';
 				$sujet .='</tr>';
 				$sujet .='</tr>';
+				$premiereEntree=($pageActuelle-1)*$messagesParPage;
 				//on s'occupe de l'affichage des messages du sujets
-				$QryForummessages = "SELECT * FROM {{table}} WHERE `topic_id`='".$idsujet."' and `post_forum_id`='".$idforum."' ORDER BY `post_time` ASC";
+				$QryForummessages = "SELECT * FROM {{table}} WHERE `topic_id`='".$idsujet."' and `post_forum_id`='".$idforum."' ORDER BY `post_time` ASC  LIMIT ".$premiereEntree.", ".$messagesParPage."";
 				$Forum_Messages_query = doquery ($QryForummessages, 'forum_post');
 				while ($ListDesessages = mysql_fetch_array($Forum_Messages_query)) 
 				{
@@ -102,15 +143,15 @@
 				// la on commence le serieus
 				if($posteur['authlevel']==0)
 				{
-					$rang= "membres de Tenexia";
+					$rang= "membres de ". GAMENAME ."";
 				}
 				elseif($posteur['authlevel']==1)
 				{
-					$rang= "<font color='lime'>Modérateur de Tenexia</font>";
+					$rang= "<font color='lime'>Modérateur de ". GAMENAME ."</font>";
 				}
 				elseif($posteur['authlevel']==2)
 				{
-					$rang= "<font color='orange'>Opérateur de Tenexia</font>";
+					$rang= "<font color='orange'>Opérateur de ". GAMENAME ."</font>";
 				}
 				elseif($posteur['authlevel']==3)
 				{

@@ -119,22 +119,22 @@ function display ($page, $title = '', $topnav = false, $metatags = '', $AdminPag
 	else
 	{
 		//on peux rentré dans le jeu
-		if ($topnav && $user['valid_key'] == 1) 
+		if ($topnav && $user['valid_key'] == 1 && is_mobile()==false) 
 		{
 			$DisplayPage .= ShowTopNavigationBar( $user, $planetrow );
 		}
 
 		// le panel admin :P
-		if($user['authlevel']>=3 && !defined('FORUM'))
-		{
-			$DisplayPage .= ShowPanel( $user, $planetrow );
-		}
+		// if($user['authlevel']>=3 && !defined('FORUM'))
+		// {
+			// $DisplayPage .= ShowPanel( $user, $planetrow );
+		// }
 		
 		//on affiche les mouvement de flotte
-		if(!defined('IN_INSTALL') && !defined('FORUM'))
-		{
-			$DisplayPage .= ShowFleet( $user, $planetrow );
-		}
+		// if(!defined('IN_INSTALL') && !defined('FORUM'))
+		// {
+			// $DisplayPage .= ShowFleet( $user, $planetrow );
+		// }
 		
 		//si le compte n'a pas etait activé
 		if(isset($user) && $user['valid_key'] == 0)
@@ -147,8 +147,22 @@ function display ($page, $title = '', $topnav = false, $metatags = '', $AdminPag
 			$DisplayPage .= ShowLeftMenu( $user, $planetrow );
 		}
 		
-		
-		$DisplayPage .= "<div class='corp_main'>". $page ."</div></div>";
+		if(is_mobile()==false)
+		{
+			$DisplayPage .= "<div class='corp_main'>". $page ."</div></div>";
+		}
+		else
+		{
+			$DisplayPage .= '
+			<div id="content" class="snap-content">
+				<div id="toolbar">
+					<a href="#" id="open-left"></a>
+					<h1>'.GAMENAME.'</h1>
+					<br>';
+			$DisplayPage .= ShowTopNavigationBar( $user, $planetrow );
+			$DisplayPage .= "". $page ."";
+			$DisplayPage .= '</div></div>';
+		}			
 	}
 
 	$DisplayPage .= StdFooter();
@@ -191,7 +205,7 @@ function StdUserHeader ($title = '', $metatags = '') {
 	}
 	else
 	{
-		if (defined('LOGIN')) 
+		if (defined('LOGIN') or defined('GAME')) 
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
 			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."mobile/snap.css\" />";
@@ -205,7 +219,6 @@ function StdUserHeader ($title = '', $metatags = '') {
 		elseif(defined('GAME'))
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_game.css\" />";
 			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_fleet.css\" />";
 		}
 	}

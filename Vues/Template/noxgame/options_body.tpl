@@ -25,6 +25,9 @@
 	<th>{permanentemaildir}</th>
 	<th>{opt_mail2_data}</th>
 </tr><tr>
+	<th>apparaitre dans les records:</th>
+	<th><input name="settings_record"{user_settings_record} type="checkbox" /></th>
+</tr><tr>
 	<th>avatar url:</th>
 	<th><input name="avatar" size="20" value="{opt_avata_data}" type="text"></th>
 </tr><tr>

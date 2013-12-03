@@ -48,11 +48,13 @@ switch($_GET['type'])
 			// repondre au sujet
 			if(isset($_GET['sujet']))
 			{
+				include_once('function/areatext.php');
 				include_once('function/repondre.php');
 			}
 			// citer ou éditer un message
 			if(isset($_GET['mode']))
 			{
+				include_once('function/areatext.php');
 				include_once('function/quote.php');
 				include_once('function/edit.php');
 				include_once('function/delete.php');
@@ -62,6 +64,7 @@ switch($_GET['type'])
 		//ecrire un nouveau sujet
 		if(isset($_GET['sujet']))
 		{
+			include_once('function/areatext.php');
 			include_once('function/nouveau.php');
 		}
 	break;
@@ -93,6 +96,7 @@ switch($_GET['type'])
 	$page .='<script src="script/forum/tinymce.min.js"></script>';
 	
 	$page .='<table class="forum" RULES="BASIC">';
+	$countcat = mysql_num_rows($Forum_cat_query);
 	while ($ListCategories = mysql_fetch_array($Forum_cat_query)) 
 	{
 		$page .='<tr>';
@@ -156,6 +160,8 @@ switch($_GET['type'])
 			$totomgs += $totalmgs;
 			$totosuj += $totaltopic;
 		}
+		if($countcat==$ListCategories['cat_ordre'])
+		{
 		$page .='<tr>';
 		$page .='<td class="title" colspan="4"><h1>Centre d\'information</h1></td>';
 		$page .='</tr>';
@@ -198,6 +204,7 @@ switch($_GET['type'])
 		$page .='</div></p>
 		</td>';
 		$page .='</tr>';
+		}
 		$page .='</table>';
 		$page .='</td>';
 		$page .='</tr>';

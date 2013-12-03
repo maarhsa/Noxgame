@@ -58,7 +58,7 @@
 			$Forum_Forum_query = doquery ($QryForumForum, 'forum_forum',true);
 			
 			//systeme de pagination -_-'
-			$messagesParPage=20; //Nous allons afficher 20 messages par page.
+			$messagesParPage=COUNT_SUJET_PAGE; //Nous allons afficher 20 messages par page.
 			 
 			//Une connexion SQL doit être ouverte avant cette ligne...
 			$retour_total="SELECT COUNT(*) AS total FROM {{table}}"; //Nous récupérons le contenu de la requête dans $retour_total

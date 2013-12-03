@@ -75,7 +75,7 @@ switch($_GET['type'])
 								{{table}}
 						SET 
 								`rpg_geologue` =`rpg_geologue` + '{$temps}',
-								`vote` =`vote` - '70'
+								`vote` =`vote` - '{$numbrevote}'
 						WHERE 
 								`id`      = '{$user['id']}';";
 
@@ -133,7 +133,7 @@ switch($_GET['type'])
 								{{table}}
 						SET 
 								`rpg_amiral` =`rpg_amiral` + '{$temps}',
-								`vote` =`vote` - '70'
+								`vote` =`vote` - '{$numbrevote}'
 						WHERE 
 								`id`      = '{$user['id']}';";
 
@@ -191,7 +191,7 @@ switch($_GET['type'])
 								{{table}}
 						SET 
 								`rpg_technocrate` =`rpg_technocrate` + '{$temps}',
-								`vote` =`vote` - '70'
+								`vote` =`vote` - '{$numbrevote}'
 						WHERE 
 								`id`      = '{$user['id']}';";
 
@@ -249,7 +249,7 @@ switch($_GET['type'])
 								{{table}}
 						SET 
 								`rpg_ingenieur` =`rpg_ingenieur` + '{$temps}',
-								`vote` =`vote` - '70'
+								`vote` =`vote` - '{$numbrevote}'
 						WHERE 
 								`id`      = '{$user['id']}';";
 

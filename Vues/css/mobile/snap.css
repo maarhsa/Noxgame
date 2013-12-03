@@ -100,3 +100,8 @@ input[type=submit]
 .snapjs-expand-right .snap-drawer-right {
   width: 100%;
 }
+div.topnav
+{
+	margin:0;
+	padding:0;
+}

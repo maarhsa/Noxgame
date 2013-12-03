@@ -58,6 +58,7 @@ ul
 
 img
 {
+	cursor:pointer;
 	/* contour arrondie */
 	border-radius: 5px;
 	-webkit-border-radius:5px;
@@ -85,7 +86,7 @@ div.valid_key
 	text-shadow : 0px 1px 5px red; /* Ajoute de l'ombre sur le texte : Décalage horizontal - puis vertical - Flou - Couleur */
 }
 
-div.hauteur,.rapport,div.corp_game,table.box,div.topnav_game,div.news_game,div.admin_game,.mini,div.officier,table.construct,table.construct select,div.footer,table.forum,table.section, .description, table.avatar,tr.messages,.quote2, div.balise,.tablemenu
+div.hauteur,.rapport,div.corp_game,table.box,div.topnav_game,div.news_game,div.admin_game,.mini,div.officier,table.construct,table.construct select,div.footer,table.forum, .description, table.avatar,tr.messages,.quote2s,.tablemenu
 {
 	background :url('../images/Games/img/fond.png');
 	/* ombrage */
@@ -882,15 +883,16 @@ ul.balise{
  
  div.balise
  {
+	background :url('../images/Games/img/fond.png');
+	cursor:pointer;
 	text-align:center;
+	padding-top:2px;
 	height:20px;
 	min-width:20px;
 	color:#fff;
-	
 	border : 1px solid #616968; /* Ajoute un bord */
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	padding-top:1px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
 	padding-bottom:1px;
 	padding-left:3px;
 	padding-right:3px;

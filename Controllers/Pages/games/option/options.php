@@ -106,6 +106,12 @@
        } else {
           $db_email = $user['email'];
        }
+       // Affichage record
+       if (isset($_POST["settings_record"]) && $_POST["settings_record"] == 'on') {
+          $settings_record = "1";
+       } else {
+          $settings_record = "0";
+       }
        // Cantidad de sondas de espionaje
        if (isset($_POST["spio_anz"]) && is_numeric($_POST["spio_anz"])) {
           $spio_anz = $_POST["spio_anz"];
@@ -232,6 +238,7 @@
        `settings_fleetactions` = '$settings_fleetactions',
        `settings_allylogo` = '$settings_allylogo',
        `settings_esp` = '$settings_esp',
+	   `record` = '$settings_record',
        `settings_wri` = '$settings_wri',
        `settings_bud` = '$settings_bud',
        `settings_mis` = '$settings_mis',
@@ -299,6 +306,7 @@
        $parse['vacation_until'] = date("d.m.Y G:i:s",$user['urlaubs_until']);
        $parse['user_settings_rep'] = ($user['settings_rep'] == 1) ? " checked='checked'/":'';
        $parse['user_settings_esp'] = ($user['settings_esp'] == 1) ? " checked='checked'/":'';
+	   $parse['user_settings_record'] = ($user['record'] == 1) ? " checked='checked'/":'';
        $parse['user_settings_wri'] = ($user['settings_wri'] == 1) ? " checked='checked'/":'';
        $parse['user_settings_mis'] = ($user['settings_mis'] == 1) ? " checked='checked'/":'';
        $parse['user_settings_bud'] = ($user['settings_bud'] == 1) ? " checked='checked'/":'';

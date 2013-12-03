@@ -44,6 +44,8 @@ if ( defined('INSIDE') ) {
 	define('OPERATEUR'      ,"mandalorien");
 	define('DESIGNER'      ,"mandalorien");
 	
+	define('COUNT_SUJET_PAGE'      ,20); #20 sujets par page
+	define('COUNT_MESSAGES_PAGE'      ,20); #20 sujets par page
 	define('MAX_FINISH_BONUS_BUILD'      , 3);
 	define('MAX_FINISH_BONUS_TECH'       , 3);
 	define('MAX_FINISH_BONUS_FLEET'      , 3);

@@ -27,7 +27,7 @@
   * documentation for further information about customizing XNova.
  *
  */
-ini_set('display_errors', true);
+ini_set('display_errors', false);
 
 define('INSIDE' , true);
 define('INSTALL', false);
@@ -159,41 +159,42 @@ EOF;
             fwrite($dz, $fileData);
             fclose($dz);
 
-			doquery ( $QryTableAdmin        , 'admin'        );#1
-            doquery ( $QryTableAks        , 'aks'        );#2
-			doquery ( $QryTableAnnonce    , 'annonce'    );#3
-            doquery ( $QryTableAlliance   , 'alliance'   );#4
-			doquery ( $QryTableallystock   , 'ally_stock'   );#5
-			doquery ( $QryTableBots, 'bots');#6
-			doquery ( $QryTableBox, 'box');#6
-			doquery ( $QryTableBox, 'box_vote');#7
-			doquery ( $QryTableAttack   , 'attack'   );#8
-			doquery ( $QryTableBanned     , 'banned'     );#9
-            doquery ( $QryTableBuddy      , 'buddy'      );#10
-            doquery ( $QryTableChat       , 'chat'       );#11
-            doquery ( $QryTableConfig     , 'config'     );#12
-            doquery ( $QryInsertConfig    , 'config'     );#13
-            doquery ( $QryTabledeclared        , 'declared'        );#14
-            doquery ( $QryTableErrors     , 'errors'     );#15
-            doquery ( $QryTableFleets     , 'fleets'     );#16
-			doquery ( $QryTableFleetsTricheur     , 'fleetstricheur'     );#17
-			doquery ( $QryTableCategorie     , 'forum_categorie'     );#18
-			doquery ( $QryTableForum     , 'forum_forum'     );#19
-			doquery ( $QryTableTopic     , 'forum_topic'     );#20
-			doquery ( $QryTablePosts     , 'forum_post'     );#21
-            doquery ( $QryTableGalaxy     , 'galaxy'     );#22
-            doquery ( $QryTableIraks      , 'iraks'      );#23
-            doquery ( $QryTableLunas      , 'lunas'      );#24
-            doquery ( $QryTableMessages   , 'messages'   );#25
-            doquery ( $QryTableNotes      , 'notes'      );#26
-            doquery ( $QryTablePlanets    , 'planets'    );#27
-            doquery ( $QryTableRw         , 'rw'         );#28
-            doquery ( $QryTableStatPoints , 'statpoints' );#29
-			doquery ( $QryTableTeleport , 'teleportation' );#30
-			doquery ( $QryTableTeleportAdmin , 'teleportation_admin' );#31
-			doquery ( $QryTableSip     , 'sip'      );#32
-            doquery ( $QryTableUsers      , 'users'      );#33
-            doquery ( $QryTableMulti      , 'multi'      );#34
+			doquery ( $QryTableAdmin		, 'admin'		);#1
+            doquery ( $QryTableAks			, 'aks'			);#2
+            doquery ( $QryTableAlliance		, 'alliance'	);#3
+			doquery ( $QryTableallystock	, 'ally_stock'	);#4
+			doquery ( $QryTableBots			, 'bots'		);#5
+			doquery ( $QryTableBox			, 'box'			);#6
+			doquery ( $QryTableBox			, 'box_vote'	);#7
+			doquery ( $QryTableAttack		, 'attack'		);#8
+			doquery ( $QryTableBanned		, 'banned'		);#9
+            doquery ( $QryTableBuddy		, 'buddy'		);#10
+            doquery ( $QryTableChat			, 'chat'		);#11
+            doquery ( $QryTableConfig		, 'config'		);#12
+            doquery ( $QryInsertConfig		, 'config'		);#12 bis
+            doquery ( $QryTabledeclared		, 'declared'	);#13
+            doquery ( $QryTableErrors		, 'errors'		);#14
+            doquery ( $QryTableFleets		, 'fleets'		);#15
+			doquery ( $QryTableFleetsTricheur	, 'fleetstricheur');#16
+			doquery ( $QryTableCategorie	, 'forum_categorie');#17
+			doquery ( $QryInsertCategorie	, 'forum_categorie');#17 bis
+			doquery ( $QryTableForum		, 'forum_forum'	);#18
+			doquery ( $QryInsertForum		, 'forum_forum'	);#18 bis
+			doquery ( $QryTableTopic		, 'forum_topic'	);#19
+			doquery ( $QryTablePosts		, 'forum_post'	);#20
+            doquery ( $QryTableGalaxy		, 'galaxy'		);#21
+            doquery ( $QryTableIraks		, 'iraks'		);#22
+            doquery ( $QryTableLunas		, 'lunas'		);#23
+            doquery ( $QryTableMessages		, 'messages'	);#24
+            doquery ( $QryTableNotes		, 'notes'		);#25
+            doquery ( $QryTablePlanets		, 'planets'		);#26
+            doquery ( $QryTableRw			, 'rw'			);#27
+            doquery ( $QryTableStatPoints	, 'statpoints'	);#28
+			doquery ( $QryTableTeleport		, 'teleportation');#29
+			doquery ( $QryTableTeleportAdmin, 'teleportation_admin');#30
+			doquery ( $QryTableSip			, 'sip'			);#31
+            doquery ( $QryTableUsers		, 'users'		);#32
+            doquery ( $QryTableMulti		, 'multi'		);#33
 
             $subTpl = gettemplate ('install/ins_form_done');
             $bloc   = $lang;

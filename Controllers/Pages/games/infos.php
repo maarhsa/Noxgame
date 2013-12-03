@@ -382,7 +382,7 @@ function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
 	$gid  = $_GET['gid'];
 	$page = ShowBuildingInfoPage ($user, $planetrow, $gid);
 
-	display ($page, $title);
+	display ($page, $title,true);
 
 // -----------------------------------------------------------------------------------------------------------
 // History version
