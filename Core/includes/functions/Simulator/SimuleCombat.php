@@ -22,7 +22,7 @@ function SimuleCombat($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno)
 {
 	global $pricelist, $lang;
 	
-	include_once(INCLUDES .'simulator.' . PHPEXT);
+	include_once('simulator.' . PHPEXT);
 
     // Calcul de la duree de traitement (initialisation)
     $mtime = microtime();

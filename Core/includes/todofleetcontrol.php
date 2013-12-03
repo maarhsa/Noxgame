@@ -111,10 +111,7 @@ include(VAISSEAU.'FinishshipFromQueue.'.PHPEXT);
 include(VAISSEAU.'HandleFleetBuildingQueue.'.PHPEXT);
 
 //simulateur de combat
-include('functions/SimuleCombat.'.PHPEXT);
-include('functions/calculateAttack.'.PHPEXT);
-include('functions/calculateAttack2.'.PHPEXT);
-include('functions/formatCR.'.PHPEXT);
+include('functions/Simulator/SimuleCombat.'.PHPEXT);
 
 //divers
 include('functions/AbandonColony.'.PHPEXT);
