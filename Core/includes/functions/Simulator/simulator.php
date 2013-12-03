@@ -233,6 +233,9 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 									$rapidfire = false;
 								}
 								$defenseur_n[$c]['count'] -= $n_v_d;
+								if ($defenseur_n[$c]['count'] <= 0) {
+									$defenseur_n[$c]['count'] = 0;
+								}
 							}
 						}
 					}
@@ -288,7 +291,10 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 								} else{
 									$rapidfire = false;
 								}
-							$attaquant_n[$a]['count'] -= $n_v_a;
+								$attaquant_n[$a]['count'] -= $n_v_a;
+								if ($attaquant_n[$a]['count'] <= 0) {
+									$attaquant_n[$a]['count'] = 0;
+								}
 							}
 						}
 					}
