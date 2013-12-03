@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of Noxgame
+ * This fn is part of Noxgame
  *
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  *
@@ -119,34 +119,59 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 		if (($attaquant_nombre == 0) or ($defenseur_nombre == 0)) {
 			break;
 		}
-		for($a = 200; $a < 500; $a++) {
-			if ($CurrentSet[$a]['count'] > 0) {		
-				foreach ($CombatCaps[$a]['sd'] as $c => $d) 
-				{
-					if (isset($TargetSet[$c]))
-					{
-						// combat le rapidfire est plus petit ou egale 1 il n'y en a pas 
-						if($d == 1) {
-							$rapidfire = false;
-						} else {
-							$rapidfire = true;
+
+	//on commence par le combat attaquant vs defenseur
+	for($a = 200; $a < 500; $a++) {
+			if ($TargetSet[$a]['count'] > 0) {
+				if ($defenseur_nombre > 0) { #si il y a toujours des vaisseaux :P
+					$attaquant_puissance = $TargetSet[$a]['count'] * $attaquant_dommage / $defenseur_nombre;
+					//si le bouclier du defenseur est plus petit ou égale a la puissance de l'attaquant 
+					if ($TargetSet[$a]["tarcza"] <= $attaquant_puissance) {
+						$defenseur_bouclier = $defenseur_bouclier + $TargetSet[$a]["tarcza"];
+						$attaquant_puissance -= $defenseur_bouclier;
+						
+						//si la coque du defenseur est plus grand que la puissance de l'attaquant
+						if($TargetSet[$a]["obrona"] > $attaquant_puissance)
+						{
+							$coque = $TargetSet[$a]["obrona"] - $attaquant_puissance;
+							$n_v_d = round(($coque/$TargetSet[$a]["obrona"]) * $TargetSet[$a]["count"]);
+							$defenseur_n[$a]['count'] = $n_v_d;
+
+						if ($defenseur_n[$a]['count'] <= 0) {
+							$defenseur_n[$a]['count'] = 0;
 						}
+						}
+					} else {
+						$defenseur_n[$a]['count'] = $TargetSet[$a]['count'];
+						$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
 					}
+				} else {
+					$defenseur_n[$a]['count'] = $TargetSet[$a]['count'];
+					$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
 				}
-				
-				if ($attaquant_nombre > 0) {
-					$defenseur_puissance = $CurrentSet[$a]['count'] * $defenseur_dommage / $attaquant_nombre;
-					if ($CurrentSet[$a]["tarcza"] < $defenseur_puissance) {
-						$max_zdjac = floor($CurrentSet[$a]['count'] * $defenseur_nombre / $attaquant_nombre);
-						$defenseur_puissance = $defenseur_puissance - $CurrentSet[$a]["tarcza"];
-						$attaquant_bouclier = $attaquant_bouclier + $CurrentSet[$a]["tarcza"];
-						$ile_zdjac = floor(($defenseur_puissance / (($pricelist[$a]['metal'] + $pricelist[$a]['crystal']) / 10)));
-						if ($ile_zdjac > $max_zdjac) {
-							$ile_zdjac = $max_zdjac;
-						}
-						$attaquant_n[$a]['count'] = ceil($CurrentSet[$a]['count'] - $ile_zdjac);
-						if ($attaquant_n[$a]['count'] <= 0) {
-							$attaquant_n[$a]['count'] = 0;
+			}
+		}
+		
+		
+		//le defenseur qui replique
+	for($a = 200; $a < 500; $a++) {
+		if ($CurrentSet[$a]['count'] > 0) {		
+			if ($attaquant_nombre > 0) {
+				$defenseur_puissance = $CurrentSet[$a]['count'] * $defenseur_dommage / $attaquant_nombre;
+					//si le bouclier de l'attaquant est plus petit ou égale a la puissance du defenseur 
+					if ($CurrentSet[$a]["tarcza"] <= $defenseur_puissance) {
+						$attaquant_bouclier = ($attaquant_bouclier + $CurrentSet[$a]["tarcza"]);
+						$defenseur_puissance -= $attaquant_bouclier;
+						//si la coque de l'attaquant est plus grand que la puissance du defenseur
+						if($CurrentSet[$a]["obrona"] > $defenseur_puissance)
+						{
+							$coque = $CurrentSet[$a]["obrona"] - $defenseur_puissance;
+							$n_v_a = round(($coque/$CurrentSet[$a]["obrona"]) * $CurrentSet[$a]["count"]);
+							$attaquant_n[$a]['count'] = $n_v_a;				
+							
+							if ($attaquant_n[$a]['count'] <= 0) {
+								$attaquant_n[$a]['count'] = 0;
+							}
 						}
 					} else {
 						$attaquant_n[$a]['count'] = $CurrentSet[$a]['count'];
@@ -159,14 +184,68 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 			}
 		}
 
+		//rf de l'attaquant
+		for($a = 200; $a < 500; $a++) {
+			if ($CurrentSet[$a]['count'] > 0) {
+				// combat le rapidfire est plus petit ou egale 1 il n'y en a pas 
+				foreach ($CombatCaps[$a]['sd'] as $c => $d) {
+					if (isset($TargetSet[$c])){
+						// combat le rapidfire est plus petit ou egale 1 il n'y en a pas 
+						if($d == 1) {
+							$rapidfire = false;
+						} else {
+							$rapidfire = true;
+						}
+					}
+				}	
+				//donc si il y a rf
+				if($rapidfire){
+					while($rapidfire){
+						$randEntier = rand(0,100);
+						$randDecimal = rand(0,99);
+						$pourcentage = $randEntier + ($randDecimal / 100);
+						foreach ($CombatCaps[$a]['sd'] as $c => $d) {
+							if (isset($TargetSet[$c])){
+								if($pourcentage < 100*(1 - ( 1 / $CombatCaps[$a]['sd'][$c]))) {
+									if ($defenseur_nombre > 0) {
+										$attaquant_puissance = $TargetSet[$c]['count'] * $attaquant_dommage / $defenseur_nombre;
+										if ($TargetSet[$c]["tarcza"] <= $attaquant_puissance) {
+											$attaquant_puissance -= $defenseur_bouclier;				
+											//si la coque du defenseur est plus grand que la puissance de l'attaquant
+											if($TargetSet[$c]["obrona"] > $attaquant_puissance)
+											{
+												$coque = $TargetSet[$c]["obrona"] - $attaquant_puissance;
+												$n_v_d = round(($coque/$TargetSet[$c]["obrona"]) * $TargetSet[$c]["count"]);
+
+												if ($defenseur_n[$c]['count'] <= 0) {
+													$defenseur_n[$c]['count'] = 0;
+												}
+											}
+										} else {
+											$defenseur_n[$c]['count'] = $TargetSet[$c]['count'];
+											$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
+										}
+									} else {
+										$defenseur_n[$c]['count'] = $TargetSet[$c]['count'];
+										$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
+									}
+								} else{
+									$rapidfire = false;
+								}
+								$defenseur_n[$c]['count'] -= $n_v_d;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		//rf de du defenseur
 		for($a = 200; $a < 500; $a++) {
 			if ($TargetSet[$a]['count'] > 0) {
-			
 				// combat le rapidfire est plus petit ou egale 1 il n'y en a pas 
-				foreach ($CombatCaps[$a]['sd'] as $c => $d) 
-				{
-					if (isset($CurrentSet[$c]))
-					{
+				foreach ($CombatCaps[$a]['sd'] as $c => $d) {
+					if (isset($CurrentSet[$c])){
 						// combat le rapidfire est plus petit ou egale 1 il n'y en a pas 
 						if($d == 1) {
 							$rapidfire = false;
@@ -175,33 +254,48 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 						}
 					}
 				}
-
-				if ($defenseur_nombre > 0) {
-					$attaquant_puissance = $TargetSet[$a]['count'] * $attaquant_dommage / $defenseur_nombre;
-					if ($TargetSet[$a]["tarcza"] < $attaquant_puissance) {
-						$max_zdjac = floor($TargetSet[$a]['count'] * $attaquant_nombre / $defenseur_nombre);
-						$attaquant_puissance = $attaquant_puissance - $TargetSet[$a]["tarcza"];
-						$defenseur_bouclier = $defenseur_bouclier + $TargetSet[$a]["tarcza"];
-						$ile_zdjac = floor(($attaquant_puissance / (($pricelist[$a]['metal'] + $pricelist[$a]['crystal']) / 10)));
-						if ($ile_zdjac > $max_zdjac) {
-							$ile_zdjac = $max_zdjac;
+				//donc si il y a rf
+				if($rapidfire){
+					while($rapidfire){
+						$randEntier = rand(0,100);
+						$randDecimal = rand(0,99);
+						$pourcentage = $randEntier + ($randDecimal / 100);
+						foreach ($CombatCaps[$a]['sd'] as $c => $d) {
+						if (isset($CurrentSet[$c])){
+								if($pourcentage < 100*(1 - ( 1 / $CombatCaps[$a]['sd'][$c]))) {
+									if ($attaquant_nombre > 0) {
+									$defenseur_puissance = $CurrentSet[$c]['count'] * $defenseur_dommage / $attaquant_nombre;	
+										if ($CurrentSet[$c]["tarcza"] <= $defenseur_puissance) {
+											$defenseur_puissance -= $attaquant_bouclier;
+											//si la coque de l'attaquant est plus grand que la puissance du defenseur
+											if($CurrentSet[$a]["obrona"] > $defenseur_puissance)
+											{
+												$coque = $CurrentSet[$a]["obrona"] - $defenseur_puissance;
+												$n_v_a = round(($coque/$CurrentSet[$a]["obrona"]) * $CurrentSet[$a]["count"]);				
+												
+												if ($attaquant_n[$a]['count'] <= 0) {
+													$attaquant_n[$a]['count'] = 0;
+												}
+											}
+										} else {
+											$attaquant_n[$a]['count'] = $CurrentSet[$a]['count'];
+											$attaquant_bouclier = $attaquant_bouclier + $defenseur_puissance;
+										}
+									} else {
+										$attaquant_n[$a]['count'] = $CurrentSet[$a]['count'];
+										$attaquant_bouclier = $attaquant_bouclier + $defenseur_puissance;
+									}
+								} else{
+									$rapidfire = false;
+								}
+							$attaquant_n[$a]['count'] -= $n_v_a;
+							}
 						}
-						$defenseur_n[$a]['count'] = ceil($TargetSet[$a]['count'] - $ile_zdjac);
-						if ($defenseur_n[$a]['count'] <= 0) {
-							$defenseur_n[$a]['count'] = 0;
-						}
-					} else {
-						$defenseur_n[$a]['count'] = $TargetSet[$a]['count'];
-						$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
 					}
-				} else {
-					$defenseur_n[$a]['count'] = $TargetSet[$a]['count'];
-					$defenseur_bouclier = $defenseur_bouclier + $attaquant_puissance;
 				}
 			}
 		}
-
-
+		
 		$runda[$i]["atakujacy"]["tarcza"] = $attaquant_bouclier;
 		$runda[$i]["wrog"]["tarcza"] = $defenseur_bouclier;
 		$TargetSet = $defenseur_n;
@@ -229,27 +323,27 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 		$runda[$i]["wrog"]['count'] = $defenseur_nombre;
 		$wygrana = "r";
 	}
-	$attaquant_zlom_koniec['metal'] = 0;
-	$attaquant_zlom_koniec['crystal'] = 0;
+	$attaquant_perte['metal'] = 0;
+	$attaquant_perte['crystal'] = 0;
 	if (!is_null($CurrentSet)) {
 		for($a = 200; $a < 500; $a++) {
 			if ($CurrentSet[$a]['count'] > 0) {
-				$attaquant_zlom_koniec['metal'] = $attaquant_zlom_koniec['metal'] + $CurrentSet[$a]['count'] * $pricelist[$a]['metal'];
-				$attaquant_zlom_koniec['crystal'] = $attaquant_zlom_koniec['crystal'] + $CurrentSet[$a]['count'] * $pricelist[$a]['crystal'];
+				$attaquant_perte['metal'] = $attaquant_perte['metal'] + $CurrentSet[$a]['count'] * $pricelist[$a]['metal'];
+				$attaquant_perte['crystal'] = $attaquant_perte['crystal'] + $CurrentSet[$a]['count'] * $pricelist[$a]['crystal'];
 			}
 		}
 	}
-	$defenseur_zlom_koniec['metal'] = 0;
-	$defenseur_zlom_koniec['crystal'] = 0;
+	$defenseur_perte['metal'] = 0;
+	$defenseur_perte['crystal'] = 0;
 	if (!is_null($TargetSet)) {
 		for($a = 200; $a < 500; $a++) {
 			if ($TargetSet[$a]['count'] > 0) {
 				if ($a < 300) {
-					$defenseur_zlom_koniec['metal'] = $defenseur_zlom_koniec['metal'] + $TargetSet[$a]['count'] * $pricelist[$a]['metal'];
-					$defenseur_zlom_koniec['crystal'] = $defenseur_zlom_koniec['crystal'] + $TargetSet[$a]['count'] * $pricelist[$a]['crystal'];
+					$defenseur_perte['metal'] = $defenseur_perte['metal'] + $TargetSet[$a]['count'] * $pricelist[$a]['metal'];
+					$defenseur_perte['crystal'] = $defenseur_perte['crystal'] + $TargetSet[$a]['count'] * $pricelist[$a]['crystal'];
 				} else {
-					$defenseur_zlom_koniec_coque['metal'] = $defenseur_zlom_koniec_coque['metal'] + $TargetSet[$a]['count'] * $pricelist[$a]['metal'];
-					$defenseur_zlom_koniec_coque['crystal'] = $defenseur_zlom_koniec_coque['crystal'] + $TargetSet[$a]['count'] * $pricelist[$a]['crystal'];
+					$defenseur_perte_coque['metal'] = $defenseur_perte_coque['metal'] + $TargetSet[$a]['count'] * $pricelist[$a]['metal'];
+					$defenseur_perte_coque['crystal'] = $defenseur_perte_coque['crystal'] + $TargetSet[$a]['count'] * $pricelist[$a]['crystal'];
 				}
 			}
 		}
@@ -271,14 +365,14 @@ function simulator($CurrentSet, $TargetSet, $CurrentTechno, $TargetTechno) {
 		$wygrana = "w";
 	}
 
-	$zlom['metal']    = ((($attaquant_structure['metal']   - $attaquant_zlom_koniec['metal'])   + ($defenseur_structure['metal']   - $defenseur_zlom_koniec['metal']))   * ($game_config['Fleet_Cdr'] / 100));
-	$zlom['crystal']  = ((($attaquant_structure['crystal'] - $attaquant_zlom_koniec['crystal']) + ($defenseur_structure['crystal'] - $defenseur_zlom_koniec['crystal'])) * ($game_config['Fleet_Cdr'] / 100));
+	$zlom['metal']    = ((($attaquant_structure['metal']   - $attaquant_perte['metal'])   + ($defenseur_structure['metal']   - $defenseur_perte['metal']))   * ($game_config['Fleet_Cdr'] / 100));
+	$zlom['crystal']  = ((($attaquant_structure['crystal'] - $attaquant_perte['crystal']) + ($defenseur_structure['crystal'] - $defenseur_perte['crystal'])) * ($game_config['Fleet_Cdr'] / 100));
 
-	$zlom['metal']   += ((($attaquant_structure['metal']   - $attaquant_zlom_koniec['metal'])   + ($defenseur_structure['metal']   - $defenseur_zlom_koniec['metal']))   * ($game_config['Defs_Cdr'] / 100));
-	$zlom['crystal'] += ((($attaquant_structure['crystal'] - $attaquant_zlom_koniec['crystal']) + ($defenseur_structure['crystal'] - $defenseur_zlom_koniec['crystal'])) * ($game_config['Defs_Cdr'] / 100));
+	$zlom['metal']   += ((($attaquant_structure['metal']   - $attaquant_perte['metal'])   + ($defenseur_structure['metal']   - $defenseur_perte['metal']))   * ($game_config['Defs_Cdr'] / 100));
+	$zlom['crystal'] += ((($attaquant_structure['crystal'] - $attaquant_perte['crystal']) + ($defenseur_structure['crystal'] - $defenseur_perte['crystal'])) * ($game_config['Defs_Cdr'] / 100));
 
-	$zlom["atakujacy"] = (($attaquant_structure['metal'] - $attaquant_zlom_koniec['metal']) + ($attaquant_structure['crystal'] - $attaquant_zlom_koniec['crystal']));
-	$zlom["wrog"]      = (($defenseur_structure['metal']      - $defenseur_zlom_koniec['metal'])      + ($defenseur_structure['crystal']      - $defenseur_zlom_koniec['crystal']) + $straty_coque_defenseur);
+	$zlom["atakujacy"] = (($attaquant_structure['metal'] - $attaquant_perte['metal']) + ($attaquant_structure['crystal'] - $attaquant_perte['crystal']));
+	$zlom["wrog"]      = (($defenseur_structure['metal']      - $defenseur_perte['metal'])      + ($defenseur_structure['crystal']      - $defenseur_perte['crystal']) + $straty_coque_defenseur);
 	return array("atakujacy" => $CurrentSet, "wrog" => $TargetSet, "wygrana" => $wygrana, "dane_do_rw" => $runda, "zlom" => $zlom);
 }
 
