@@ -180,12 +180,13 @@ function StdUserHeader ($title = '', $metatags = '') {
 		elseif(defined('IN_INSTALL'))
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."Install/design_install.css\" />\n";
+			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."Install/design_install.css\" />";
 		}
 		elseif(defined('GAME'))
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_game.css\" />\n";
+			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_game.css\" />";
+			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_fleet.css\" />";
 		}
 	}
 	else
@@ -193,18 +194,19 @@ function StdUserHeader ($title = '', $metatags = '') {
 		if (defined('LOGIN')) 
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."mobile/snap.css\" />\n";
-			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."mobile/demo.css\" />\n";
+			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."mobile/snap.css\" />";
+			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."mobile/demo.css\" />";
 		}
 		elseif(defined('IN_INSTALL'))
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."Install/design_install.css\" />\n";
+			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."Install/design_install.css\" />";
 		}
 		elseif(defined('GAME'))
 		{
 			$parse['-meta-']  = ($metatags) ? $metatags : "";
-			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_game.css\" />\n";
+			$parse['-style-']  = "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_game.css\" />";
+			$parse['-style-']  .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"". CSS ."design_fleet.css\" />";
 		}
 	}
 	
