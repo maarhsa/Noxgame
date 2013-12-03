@@ -19,6 +19,7 @@
  *
  */
 
+
 /* on de marre la session */
 session_start();
 ini_set('session.use_cookies', '1');
@@ -46,11 +47,17 @@ define('CONNECT',CORE .'connect/');
 define('ERROR',CORE .'error/index.php');
 
 define('PHPEXT', require 'extension.inc');
-
-define('SITEURL','http://localhost/nox/Noxgame/');
+$baseUrl = substr($_SERVER['REQUEST_URI'], 0);
+$Urlbase = explode ("/",$baseUrl);
+$var = count($Urlbase);
+unset($Urlbase[intval(0)]);
+unset($Urlbase[intval($var - 1)]);
+$newbase = implode("/",$Urlbase);
+$urlserv = $_SERVER['HTTP_HOST'] ."/".$newbase."/";
+define('SITEURL',$urlserv);
 define('SCRIPTS',SITEURL .'script/');
 define('CSS',SITEURL .'css/');
-define('REDIRECT','http://localhost/nox/Noxgame/');
+define('REDIRECT',$urlserv);
 define('IMAGES',SITEURL .'images/');
 $dpath = IMAGES;
 

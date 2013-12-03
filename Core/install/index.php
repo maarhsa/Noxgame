@@ -50,8 +50,15 @@ define('ERROR',CORE .'error/index.php');
 
 define('PHPEXT', include CORE . 'extension.inc');
 
-define('SITEURL','http://localhost/nox/');
-define('REDIRECT','http://localhost/nox/');
+$baseUrl = substr($_SERVER['REQUEST_URI'], 0);
+$Urlbase = explode ("/",$baseUrl);
+$var = count($Urlbase);
+unset($Urlbase[intval(0)]);
+unset($Urlbase[intval($var - 1)]);
+$newbase = implode("/",$Urlbase);
+$urlserv = $_SERVER['HTTP_HOST'] ."/".$newbase."/";
+define('SITEURL',$urlserv);
+define('REDIRECT',$urlserv);
 
 define('SCRIPTS',SITEURL .'script/');
 define('CSS',SITEURL .'css/');
