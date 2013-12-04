@@ -73,7 +73,7 @@ SQL;
 			}
 	} elseif (in_array($Element, $reslist['defense'])) {
 		// Pour les defenses ou la flotte 'tarif fixe' durée adaptée a u niveau nanite et usine robot
-		$time         = (($pricelist[$Element]['metal'] + $pricelist[$Element]['crystal']) / $game_config['game_speed']) * (1 / ($planet[$resource['8']] + 1)) * pow(1 / 2, $planet[$resource['7']]);
+		$time         = (($pricelist[$Element]['metal'] + $pricelist[$Element]['crystal']) / $game_config['game_speed']) * (1 / ($planet[$resource['15']] + 1)) * pow(1 / 2, $planet[$resource['7']]);
 		if($user['rpg_ingenieur']!=0)
 		{
 			$time         = floor(($time * 60 * 60) * 0.75);

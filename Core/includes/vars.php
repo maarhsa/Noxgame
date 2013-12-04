@@ -52,6 +52,8 @@ if ( defined('INSIDE')) {
 	12 => "laboratory",
 	13 => "terraformer",
 	14 => "acsdepar",
+	15 => "defhangar",
+	
 
 	101 => "spy_tech",
 	102 => "computer_tech",
@@ -135,6 +137,7 @@ if ( defined('INSIDE')) {
 		8  => array( 6 =>   2),
 		13 => array( 7 =>   1, 106 =>  12),
 		14 => array( 6 =>  15, 7=> 5, 12 =>  15),
+		15 => array( 6 =>   2),
 
 
 		// Technologies
@@ -190,14 +193,14 @@ if ( defined('INSIDE')) {
 		312 => array(  8 =>   12,106 =>  12,119 =>   1),
 
 		// Defense
-		401 => array(  8 =>   1),
-		402 => array(  8 =>   2, 106 =>   1, 111 =>   3),
-		403 => array(  8 =>   4, 106 =>   3, 111 =>   6),
-		404 => array(  8 =>   6, 106 =>   6, 103 =>   3, 104 =>   1),
-		405 => array(  8 =>   4, 112 =>   4),
-		406 => array(  8 =>   8, 113 =>   7),
-		407 => array(  8 =>   1, 104 =>   2),
-		408 => array(  8 =>   6, 104 =>   6),
+		401 => array(  15 =>   1),
+		402 => array(  15 =>   2, 106 =>   1, 111 =>   3),
+		403 => array(  15 =>   4, 106 =>   3, 111 =>   6),
+		404 => array(  15 =>   6, 103 =>   3, 104 =>   1, 106 =>   6),
+		405 => array(  15 =>   4, 112 =>   4),
+		406 => array(  15 =>   8, 113 =>   7),
+		407 => array(  15 =>   1, 104 =>   2),
+		408 => array(  15 =>   6, 104 =>   6),
 
 	);
 
@@ -216,6 +219,7 @@ if ( defined('INSIDE')) {
 		12 => array ( 'metal' =>     200, 'crystal' =>     400, 'deuterium' =>     200, 'energy' =>    0, 'factor' =>   2),
 		13 => array ( 'metal' =>       0, 'crystal' =>   50000, 'deuterium' =>  100000, 'energy' => 1000, 'factor' =>   2),
 		14 => array ( 'metal' => 2000000, 'crystal' =>  1000000, 'deuterium' =>  500000, 'energy' =>    0, 'factor' =>   4),
+		15 => array ( 'metal' =>     400, 'crystal' =>     200, 'deuterium' =>     100, 'energy' =>    0, 'factor' =>   2),
 
 		101 => array ( 'metal' =>     200, 'crystal' =>    1000, 'deuterium' =>     200, 'energy' =>    0, 'factor' =>   2),
 		102 => array ( 'metal' =>       0, 'crystal' =>     400, 'deuterium' =>     600, 'energy' =>    0, 'factor' =>   2),
@@ -356,7 +360,7 @@ if ( defined('INSIDE')) {
 		)
 	);
 
-	$reslist['build']    = array (   1,   2,   3,   4,  5,  6,  7,  8,  9,  10,  11,  12, 13, 14);
+	$reslist['build']    = array (   1,   2,   3,   4,  5,  6,  7,  8,  9,  10,  11,  12, 13, 14,15);
 	$reslist['tech']     = array ( 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119);
 	$reslist['fleet']    = array ( 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215);
 	$reslist['item']     = array ( 300, 301, 302, 303, 304, 305, 306,307, 308, 309, 310, 311, 312);

@@ -235,7 +235,7 @@ function ShowRapidFireFrom ($BuildID) {
 // Permet de faire la differance entre les divers types et les pages speciales
 //
 function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
-	global $dpath, $lang, $resource, $pricelist, $CombatCaps;
+	global $dpath, $lang, $resource, $pricelist, $CombatCaps,$reslist;
 
 	includeLang('infos');
 
@@ -249,7 +249,6 @@ function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
 	$parse['name']        = $lang['info'][$BuildID]['name'];
 	$parse['image']       = $BuildID;
 	$parse['description'] = $lang['info'][$BuildID]['description'];
-
 
 	if($BuildID >=   1 && $BuildID <=   3) {
 		// Cas des mines
@@ -269,22 +268,14 @@ function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
 		//$DestroyTPL           = gettemplate('info_buildings_destroy');
 		$TableHeadTPL         = "<tr><td class=\"c\">{nfo_level}</td><td class=\"c\">{nfo_prod_energy}</td><td class=\"c\">{nfo_difference}</td><td class=\"c\">{nfo_used_deuter}</td><td class=\"c\">{nfo_difference}</td></tr>";
 		$TableTPL             = "<tr><th>{build_lvl}</th><th>{build_prod} {build_gain}</th><th>{build_prod_diff}</th><th>{build_need}</th><th>{build_need_diff}</th></tr>";
-	} elseif ($BuildID >=  6 && $BuildID <=  12) {
+	} elseif ($BuildID >=  6 && $BuildID <=  15) {
 		// Batiments Generaux
 		$PageTPL              = gettemplate('info_buildings_general');
 		//$DestroyTPL           = gettemplate('info_buildings_destroy');
-	} elseif ($BuildID ==  13) {
-		// Batiments Terraformer
-		$PageTPL              = gettemplate('info_buildings_general');
-		//$DestroyTPL           = gettemplate('info_buildings_destroy');
-	} elseif ($BuildID ==  14) {
-		// Silo de missiles
-		$PageTPL              = gettemplate('info_buildings_general');
-		//$DestroyTPL           = gettemplate('info_buildings_destroy');
-	} elseif (in_array($Element, $reslist['tech'])) {
+	} elseif (in_array($BuildID, $reslist['tech'])) {
 		// Laboratoire
 		$PageTPL              = gettemplate('info_buildings_search');
-	} elseif (in_array($Element, $reslist['fleet'])) {
+	} elseif (in_array($BuildID, $reslist['fleet'])) {
 		// Flotte
 		$PageTPL              = gettemplate('info_buildings_fleet');
 		// $QrySelectShip	= "SELECT * FROM {{table}} WHERE id_user='".$CurrentUser['id']."' AND id_ship='".$BuildID."';";
@@ -304,7 +295,7 @@ function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
 		} elseif ($BuildID == 211) {
 			$parse['upd_speed']   = "<font color=\"yellow\">(". pretty_number ($pricelist[$BuildID]['speed2']) .")</font>";       // Vitesse rééquipée
 		}
-	} elseif (in_array($Element, $reslist['defense'])) {
+	} elseif (in_array($BuildID, $reslist['defense'])) {
 		// Defenses
 		$PageTPL              = gettemplate('info_buildings_defense');
 		$parse['element_typ'] = $lang['tech'][400];
@@ -313,22 +304,12 @@ function ShowBuildingInfoPage ($CurrentUser, $CurrentPlanet, $BuildID) {
 		$parse['hull_pt']     = pretty_number ($pricelist[$BuildID]['metal'] + $pricelist[$BuildID]['crystal']); // Points de Structure
 		$parse['shield_pt']   = pretty_number ($CombatCaps[$BuildID]['shield']);  // Points de Bouclier
 		$parse['attack_pt']   = pretty_number ($CombatCaps[$BuildID]['attack']);  // Points d'Attaque
-	} elseif ($BuildID >= 502 && $BuildID <= 503) {
-		// Misilles
-		$PageTPL              = gettemplate('info_buildings_defense');
-		$parse['element_typ'] = $lang['tech'][400];
-		$parse['hull_pt']     = pretty_number ($pricelist[$BuildID]['metal'] + $pricelist[$BuildID]['crystal']); // Points de Structure
-		$parse['shield_pt']   = pretty_number ($CombatCaps[$BuildID]['shield']);  // Points de Bouclier
-		$parse['attack_pt']   = pretty_number ($CombatCaps[$BuildID]['attack']);  // Points d'Attaque
-	} elseif ($BuildID >= 601 && $BuildID <= 615) {
-		// Officiers
-		$PageTPL              = gettemplate('info_officiers_general');
 	}
 
 	// ---- Tableau d'evolution
 	if ($TableHeadTPL != '') {
 		$parse['table_head']  = parsetemplate ($TableHeadTPL, $lang);
-		$parse['table_data']  = ShowProductionTable ($CurrentUser, $CurrentPlanet, $BuildID, $TableTPL);
+		$parse['table_data']  = ShowProductionTable ($CurrentUser, $CurrentPlanet,intval($BuildID),$TableTPL);
 	}
 
 	// La page principale

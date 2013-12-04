@@ -101,7 +101,7 @@ function ShowRechercheQueue ( $CurrentPlanet, $CurrentUser ) {
 						$ListIDRow .= "			t();\n";
 						$ListIDRow .= "		</script>";
 						$ListIDRow .= "		<strong color=\"lime\"><br><font color=\"lime\">". date("j/m H:i:s" ,$BuildEndTime) ."</font></strong>";
-						if($CurrentUser['vote'] > 1)
+						if($CurrentUser['vote'] > MAX_FINISH_BONUS_TECH)
 						{
 							if($recherchecours)
 							{

@@ -39,7 +39,7 @@ function DefensesBuildingPage ( &$CurrentPlanet, $CurrentUser ) {
 					$BuildMode           = $ListIDArray[4]; // pour savoir si on construit ou detruit
 					$lelabo = intval($Elementrecher);
 					// Deja est qu'il y a un laboratoire sur la planete ???
-					if ($lelabo == 8) 
+					if ($lelabo == 15) 
 					{
 						$chantiercours = true;
 					}
@@ -161,9 +161,9 @@ function DefensesBuildingPage ( &$CurrentPlanet, $CurrentUser ) {
 	}
 	// -------------------------------------------------------------------------------------------------------
 	// S'il n'y a pas de Chantier ...
-	if ($CurrentPlanet[$resource[8]] == 0) {
+	if ($CurrentPlanet[$resource[15]] == 0) {
 		// Veuillez avoir l'obligeance de construire le Chantier Spacial !!
-		message($lang['need_hangar'], $lang['tech'][8]);
+		message($lang['need_hangar'], $lang['tech'][15]);
 	}
 
 	// -------------------------------------------------------------------------------------------------------

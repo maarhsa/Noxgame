@@ -113,7 +113,7 @@ setTimeout(progress,1000);
 						$ListIDRow .= "			t();\n";
 						$ListIDRow .= "		</script>";
 						$ListIDRow .= "		<strong color=\"lime\"><br><font color=\"lime\">". date("j/m H:i:s" ,$BuildEndTime) ."</font></strong>";
-						if($CurrentUser['vote'] > 1)
+						if($CurrentUser['vote'] > MAX_FINISH_BONUS_BUILD)
 						{
 							$ListIDRow .= "<input class='build' type=submit name=finish value=Finir  /></div>";
 						}

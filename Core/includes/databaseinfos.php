@@ -492,6 +492,7 @@
   $QryTablePlanets    .= "`robot_factory` int(11) NOT NULL DEFAULT '0',";
   $QryTablePlanets    .= "`nano_factory` int(11) NOT NULL DEFAULT '0',";
   $QryTablePlanets    .= "`hangar` int(11) NOT NULL DEFAULT '0',";
+  $QryTablePlanets    .= "`defhangar` int(11) NOT NULL DEFAULT '0',";
   $QryTablePlanets    .= "`metal_store` int(11) NOT NULL DEFAULT '0',";
   $QryTablePlanets    .= "`crystal_store` int(11) NOT NULL DEFAULT '0',";
   $QryTablePlanets    .= "`deuterium_store` int(11) NOT NULL DEFAULT '0',";
