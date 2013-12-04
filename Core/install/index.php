@@ -35,42 +35,13 @@ define('IN_INSTALL', true);
 
 define('ROOT_PATH', dirname(dirname(dirname(__FILE__))) . DIRECTORY_SEPARATOR);
 
-define('ROOTING',	ROOT_PATH .'Controllers/Pages/');
-define('ROOTGAMES',	ROOT_PATH .'Controllers/Pages/games/');
-define('ROOTINDEX',	ROOT_PATH .'Controllers/Pages/accueil/');
-define('MODULE',	ROOT_PATH .'Controllers/Module/');
-define('MODELS',ROOT_PATH .'Models/');
-define('CORE',ROOT_PATH .'Core/');
-define('VUES',ROOT_PATH .'Vues/');
-define('STATIQUE',VUES .'Static/');
-define('CONTROLLER',ROOT_PATH .'Controllers/');
-define('INCLUDES',CORE .'includes/');
-define('CONNECT',CORE .'connect/');
-define('ERROR',CORE .'error/index.php');
+include(ROOT_PATH .'Core/includes/define.php');
 
-define('PHPEXT', include CORE . 'extension.inc');
+if (filesize(CONNECT . 'config.php') !=0) {
+    header('Location:'. REDIRECT .'');
+}
 
-$baseUrl = substr($_SERVER['REQUEST_URI'], 0);
-$Urlbase = explode ("/",$baseUrl);
-$var = count($Urlbase);
-unset($Urlbase[intval(0)]);
-unset($Urlbase[intval($var - 1)]);
-$newbase = implode("/",$Urlbase);
-$urlserv = $_SERVER['HTTP_HOST'] ."/".$newbase."/";
-define('SITEURL',$urlserv);
-define('REDIRECT',$urlserv);
-
-define('SCRIPTS',SITEURL .'script/');
-define('CSS',SITEURL .'css/');
-// lien directe des images du skin
-define('IMAGES',SITEURL .'images/');
-$dpath = IMAGES;
-
-define('TEMPLATE_DIR', realpath(VUES . 'Template/'));
-define('TEMPLATE_NAME', 'noxgame');
-define('VERSION','Tenexia');
-define('DEFAULT_LANG', 'fr');
-
+var_dump(filesize(CONNECT . 'config.php'));
 include(INCLUDES . 'debug.class.'.PHPEXT);
 $debug = new Debug();
 

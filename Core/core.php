@@ -31,40 +31,7 @@ ini_set('url_rewriter.tags', '');
 
 define('ROOT_PATH', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 
-define('ROOTING',	ROOT_PATH .'Controllers/Pages/');
-define('ROOTGAMES',	ROOT_PATH .'Controllers/Pages/games/');
-define('ROOTINDEX',	ROOT_PATH .'Controllers/Pages/accueil/');
-define('ROOTFORUM',	ROOT_PATH .'Controllers/Pages/Forum/');
-define('MODULE',	ROOT_PATH .'Controllers/Module/');
-define('ARCHIVE',	ROOT_PATH .'Archive/');
-define('MODELS',ROOT_PATH .'Models/');
-define('CORE',ROOT_PATH .'Core/');
-define('VUES',ROOT_PATH .'Vues/');
-define('STATIQUE',VUES .'Static/');
-define('CONTROLLER',ROOT_PATH .'Controllers/');
-define('INCLUDES',CORE .'includes/');
-define('CONNECT',CORE .'connect/');
-define('ERROR',CORE .'error/index.php');
-
-define('PHPEXT', require 'extension.inc');
-$baseUrl = substr($_SERVER['REQUEST_URI'], 0);
-$Urlbase = explode ("/",$baseUrl);
-$var = count($Urlbase);
-unset($Urlbase[intval(0)]);
-unset($Urlbase[intval($var - 1)]);
-$newbase = implode("/",$Urlbase);
-$urlserv = $_SERVER['HTTP_HOST'] ."/".$newbase."/";
-define('SITEURL',$urlserv);
-define('SCRIPTS',SITEURL .'script/');
-define('CSS',SITEURL .'css/');
-define('REDIRECT',$urlserv);
-define('IMAGES',SITEURL .'images/');
-$dpath = IMAGES;
-
-define('TEMPLATE_DIR', realpath(VUES . 'Template/'));
-define('TEMPLATE_NAME', 'noxgame');
-define('VERSION','BETA 2');
-define('DEFAULT_LANG', 'fr');
+include(ROOT_PATH .'Core/includes/define.php');
 
 if (0 === filesize(CONNECT . 'config.php') /*&& !defined('IN_INSTALL')*/) {
     header('Location:Core/install/');
